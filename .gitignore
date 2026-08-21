@@ -23,6 +23,7 @@ Thumbs.db
 training/logs/
 training/runs/
 training/diagnostics/
+training/visual_review/
 control_center/cache/
 .control-center-cache/
 training/assets/onshape/

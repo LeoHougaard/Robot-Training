@@ -11,9 +11,9 @@ jobs:
   source-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -41,9 +41,9 @@ jobs:
           python -m unittest test_evaluate_simple_dog_policy.py
           python -m unittest test_export_v2_policy.py
 
-      - name: Run Onshape mate-planner tests
+      - name: Run Onshape four-leg generator tests
         working-directory: onshape_mate_mirror
-        run: python -m unittest test_onshape_mate_mirror.py
+        run: python -m unittest discover -p "test_*.py"
 
       - name: Check Bash syntax
         run: |
