@@ -1,0 +1,716 @@
+#usda 1.0
+(
+    defaultPrim = "robot"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "robot" (
+    prepend apiSchemas = ["IsaacRobotAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI"]
+    displayName = "Isaac lab Assembly - repaired closed linkage"
+)
+{
+    string isaac:description = "RF leg linkage repaired with a seven-joint articulation tree and two maximal-coordinate loop closures at the unsolved CAD mate offsets."
+    string isaac:namespace = "rf_leg"
+    prepend rel isaac:physics:robotJoints = [</robot/joints/_MWF43qCtwcSwtZPvL>, </robot/joints/_Mj8z1U07QjKsN_b8o>, </robot/joints/_MDg4yzrzmMKgaKG7L>, </robot/joints/_MitydmClKjpTUmzPr>, </robot/joints/_M4g_rzxEjEDqusbKR>, </robot/joints/_MszDercQQBi5MYKja>, </robot/joints/_MH4FFqSxUVid8MSHx>]
+    prepend rel isaac:physics:robotLinks = [</robot/links/_M5h2pOkgVaejo_GDh>, </robot/links/_MBK47NygQU_fnvKKJ>, </robot/links/_MTn8HoecFwNHGSxBF>, </robot/links/_MYp_ZmExAGS9OwbEd>, </robot/links/_MfG1xwFWmgbtmCyEF>, </robot/links/_MmTeSqYZZIFXV2OsA>, </robot/links/_MqOgoznVVVm5Fuab8>, </robot/links/_MudPDoCUz0k_u1fjV>]
+    bool physxArticulation:enabledSelfCollisions = 0
+    quatd xformOp:orient = (1, 0, 0, 0)
+    double3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Scope "joints"
+    {
+        def PhysicsRevoluteJoint "_MWF43qCtwcSwtZPvL" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "PhysicsDriveAPI:angular", "IsaacJointAPI"]
+            displayName = "Main Hub RF"
+        )
+        {
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.37
+            float drive:angular:physics:stiffness = 22
+            float drive:angular:physics:targetPosition = 0
+            uniform token drive:angular:physics:type = "force"
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MfG1xwFWmgbtmCyEF>
+            rel physics:body1 = </robot/links/_MBK47NygQU_fnvKKJ>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.018, 0.13245, -0.099)
+            point3f physics:localPos1 = (0.018, 0.13245, -0.099)
+            quatf physics:localRot0 = (0.70710677, -0.70710677, -4.913961e-17, 4.913961e-17)
+            quatf physics:localRot1 = (0.70710677, -0.70710677, -4.913961e-17, 4.913961e-17)
+            float physics:lowerLimit = -50.000042
+            float physics:upperLimit = 45.00004
+            float physxJoint:armature = 0.001
+            float physxJoint:maxJointVelocity = 458.36624
+        }
+
+        def PhysicsRevoluteJoint "_Mj8z1U07QjKsN_b8o" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "PhysicsDriveAPI:angular", "IsaacJointAPI"]
+            displayName = "Hub Tibula RF"
+        )
+        {
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.37
+            float drive:angular:physics:stiffness = 22
+            float drive:angular:physics:targetPosition = 0
+            uniform token drive:angular:physics:type = "force"
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_M5h2pOkgVaejo_GDh>
+            rel physics:body1 = </robot/links/_MBK47NygQU_fnvKKJ>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.04275537, 0.17833829, -0.11426687)
+            point3f physics:localPos1 = (0.04275537, 0.17833829, -0.11426687)
+            quatf physics:localRot0 = (0.9999961, 3.8685123e-19, -0.0027833248, -1.0767368e-21)
+            quatf physics:localRot1 = (0.9999961, 3.8685123e-19, -0.0027833248, -1.0767368e-21)
+            float physics:lowerLimit = -40.00003
+            float physics:upperLimit = 42.00004
+            float physxJoint:armature = 0.001
+            float physxJoint:maxJointVelocity = 458.36624
+        }
+
+        def PhysicsRevoluteJoint "_M5Wr42GBylD274sgD" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+            displayName = "Femure Tibula RF"
+        )
+        {
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MudPDoCUz0k_u1fjV>
+            rel physics:body1 = </robot/links/_M5h2pOkgVaejo_GDh>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0.09941776, 0.09594392, -0.11325143)
+            point3f physics:localPos1 = (0.09942166, 0.09594392, -0.11395142)
+            quatf physics:localRot0 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            quatf physics:localRot1 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            float physics:lowerLimit = -572958.25
+            float physics:upperLimit = 572958.25
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+
+        def PhysicsRevoluteJoint "_MDg4yzrzmMKgaKG7L" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "PhysicsDriveAPI:angular", "IsaacJointAPI"]
+            displayName = "Hub Servo Link RF"
+        )
+        {
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.37
+            float drive:angular:physics:stiffness = 22
+            float drive:angular:physics:targetPosition = 0
+            uniform token drive:angular:physics:type = "force"
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MBK47NygQU_fnvKKJ>
+            rel physics:body1 = </robot/links/_MTn8HoecFwNHGSxBF>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.01800792, 0.17833829, -0.10940456)
+            point3f physics:localPos1 = (0.01800792, 0.17833829, -0.10940456)
+            quatf physics:localRot0 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            quatf physics:localRot1 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            float physics:lowerLimit = -45.00004
+            float physics:upperLimit = 45.00004
+            float physxJoint:armature = 0.001
+            float physxJoint:maxJointVelocity = 458.36624
+        }
+
+        def PhysicsRevoluteJoint "_M0vdxvTALZGcsulyT" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+            displayName = "Hub Link RF"
+        )
+        {
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MBK47NygQU_fnvKKJ>
+            rel physics:body1 = </robot/links/_MmTeSqYZZIFXV2OsA>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0.042727534, 0.12833829, -0.109266944)
+            point3f physics:localPos1 = (0.042727534, 0.12833829, -0.109266944)
+            quatf physics:localRot0 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            quatf physics:localRot1 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            float physics:lowerLimit = -572958.25
+            float physics:upperLimit = 572958.25
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+
+        def PhysicsRevoluteJoint "_MitydmClKjpTUmzPr" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "IsaacJointAPI"]
+            displayName = "Servo Link Tri Link RF"
+        )
+        {
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MTn8HoecFwNHGSxBF>
+            rel physics:body1 = </robot/links/_MqOgoznVVVm5Fuab8>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (-0.00067600585, 0.16176005, -0.11460864)
+            point3f physics:localPos1 = (-0.00067600585, 0.16176005, -0.11460864)
+            quatf physics:localRot0 = (2.6437493e-15, -0.9999961, 7.3584416e-18, -0.0027833248)
+            quatf physics:localRot1 = (2.6437493e-15, -0.9999961, 7.3584416e-18, -0.0027833248)
+            float physics:lowerLimit = -572958.25
+            float physics:upperLimit = 572958.25
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+
+        def PhysicsRevoluteJoint "_M4g_rzxEjEDqusbKR" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "IsaacJointAPI"]
+            displayName = "Link Tri Link"
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MmTeSqYZZIFXV2OsA>
+            rel physics:body1 = </robot/links/_MqOgoznVVVm5Fuab8>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.02404361, 0.11176004, -0.11447103)
+            point3f physics:localPos1 = (0.02404361, 0.11176004, -0.11447103)
+            quatf physics:localRot0 = (0.9999961, 3.8685123e-19, -0.0027833248, -1.0767368e-21)
+            quatf physics:localRot1 = (0.9999961, 2.3631408e-15, -0.0027833248, -6.5774135e-18)
+            float physics:lowerLimit = -572958.25
+            float physics:upperLimit = 572958.25
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+
+        def PhysicsRevoluteJoint "_MszDercQQBi5MYKja" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "IsaacJointAPI"]
+            displayName = "Tri Link Long Link RF"
+        )
+        {
+            string isaac:nameOverride
+            float[] isaac:physics:AccelerationLimit
+            int isaac:physics:index
+            float[] isaac:physics:JerkLimit
+            int isaac:physics:Rot_X:DofOffset
+            int isaac:physics:Rot_Y:DofOffset
+            int isaac:physics:Rot_Z:DofOffset
+            int isaac:physics:Tr_X:DofOffset
+            int isaac:physics:Tr_Y:DofOffset
+            int isaac:physics:Tr_Z:DofOffset
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MqOgoznVVVm5Fuab8>
+            rel physics:body1 = </robot/links/_MYp_ZmExAGS9OwbEd>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.024066435, 0.16176005, -0.11857097)
+            point3f physics:localPos1 = (0.024066435, 0.16176005, -0.11857097)
+            quatf physics:localRot0 = (2.3631408e-15, -0.9999961, 6.5774135e-18, -0.0027833248)
+            quatf physics:localRot1 = (2.3631408e-15, -0.9999961, 6.5774135e-18, -0.0027833248)
+            float physics:lowerLimit = -572958.25
+            float physics:upperLimit = 572958.25
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+
+        def PhysicsRevoluteJoint "_MH4FFqSxUVid8MSHx" (
+            prepend apiSchemas = ["PhysicsJointStateAPI:angular", "PhysxJointAPI", "IsaacJointAPI"]
+            displayName = "Long Link Tibula RF"
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </robot/links/_MudPDoCUz0k_u1fjV>
+            rel physics:body1 = </robot/links/_MYp_ZmExAGS9OwbEd>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            float physics:JointEquivalentInertia = 0
+            point3f physics:localPos0 = (0.08070544, 0.07936567, -0.1133556)
+            point3f physics:localPos1 = (0.08070544, 0.07936567, -0.1133556)
+            quatf physics:localRot0 = (3.8685123e-19, -0.9999961, 1.0767368e-21, -0.0027833248)
+            quatf physics:localRot1 = (2.3631408e-15, -0.9999961, 6.5774135e-18, -0.0027833248)
+            float physics:lowerLimit = -60.00005
+            float physics:upperLimit = 60.00005
+            float physxJoint:maxJointVelocity = 5729.5825
+        }
+    }
+
+    def Scope "links"
+    {
+        def Xform "_M5h2pOkgVaejo_GDh" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Femur <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (-0.46300155, 0.0024670183, 0.0012886887, -0.8863531)
+            float3 physics:diagonalInertia = (5.686329e-7, 0.000024817331, 0.00002520463)
+            float physics:mass = 0.016999999
+            point3f physics:centerOfMass = (0.0712752, 0.14229958, -0.11810917)
+            matrix4d xformOp:transform = ((0.007388350219948763, -0.18279448498393439, -0.9831233841896512, 0), (-0.00033872004988621314, -0.9831506196008853, 0.1827970033866666, 0), (-0.9999726484008269, -0.001017564678443062, -0.007325777253649159, 0), (-0.009069105502457521, 0.04303257794374848, 0.1710555893517217, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__M5h2pOkgVaejo_GDh_gltf" (
+                    references = [@./meshes/_M5h2pOkgVaejo_GDh.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__M5h2pOkgVaejo_GDh_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_M5h2pOkgVaejo_GDh.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__M5h2pOkgVaejo_GDh_gltf" (
+                        references = [@./meshes/_M5h2pOkgVaejo_GDh.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MBK47NygQU_fnvKKJ" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Hub <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (0.73199576, -0.03283416, 0.033391025, -0.6796979)
+            float3 physics:diagonalInertia = (0.00005071407, 0.00012003348, 0.00014759225)
+            float physics:mass = 0.19
+            point3f physics:centerOfMass = (0.032135155, 0.14274444, -0.09818689)
+            matrix4d xformOp:transform = ((0.007419571326640955, 1.5762319054120165e-16, -0.9999724746018408, 0), (5.2874624379118076e-15, -1, -8.942945163361555e-17, 0), (-0.9999724746018124, -5.190563978136945e-15, -0.007419571326642114, 0), (-0.00913082726946118, 0.038338296092275, 0.20436496698149556, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MBK47NygQU_fnvKKJ_gltf" (
+                    references = [@./meshes/_MBK47NygQU_fnvKKJ.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MBK47NygQU_fnvKKJ_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MBK47NygQU_fnvKKJ.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MBK47NygQU_fnvKKJ_gltf" (
+                        references = [@./meshes/_MBK47NygQU_fnvKKJ.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MTn8HoecFwNHGSxBF" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Servo link <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (-0.0026160507, 0.3414449, -0.93989766, 0.0009503558)
+            float3 physics:diagonalInertia = (2.908396e-7, 0.0000012245905, 0.0000014764152)
+            float physics:mass = 0.009
+            point3f physics:centerOfMass = (0.011815028, 0.1734559, -0.111990064)
+            matrix4d xformOp:transform = ((0.007388350219923593, -0.18279448498380224, -0.9831233841896958, 0), (-0.0003387200498562756, -0.983150619600921, 0.1827970033865476, 0), (-0.9999726484008444, -0.0010175646784472197, -0.007325777253649624, 0), (-0.00906987730017963, 0.038513828262376114, 0.1714721053201459, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MTn8HoecFwNHGSxBF_gltf" (
+                    references = [@./meshes/_MTn8HoecFwNHGSxBF.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MTn8HoecFwNHGSxBF_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MTn8HoecFwNHGSxBF.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MTn8HoecFwNHGSxBF_gltf" (
+                        references = [@./meshes/_MTn8HoecFwNHGSxBF.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MYp_ZmExAGS9OwbEd" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Long Link <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (0.88727593, 0.060069483, -0.044752445, -0.4551157)
+            float3 physics:diagonalInertia = (1.1574179e-7, 0.000009076491, 0.00000915381)
+            float physics:mass = 0.0059999996
+            point3f physics:centerOfMass = (0.05502022, 0.11133705, -0.119509466)
+            matrix4d xformOp:transform = ((0.007388350219950216, -0.18279448498393625, -0.9831233841896655, 0), (-0.00033872004988584777, -0.9831506196008916, 0.18279700338667618, 0), (-0.9999726484008413, -0.001017564678447877, -0.0073257772536492105, 0), (-0.009069105502458952, 0.043032577943749956, 0.1710555893517229, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MYp_ZmExAGS9OwbEd_gltf" (
+                    references = [@./meshes/_MYp_ZmExAGS9OwbEd.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MYp_ZmExAGS9OwbEd_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MYp_ZmExAGS9OwbEd.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MYp_ZmExAGS9OwbEd_gltf" (
+                        references = [@./meshes/_MYp_ZmExAGS9OwbEd.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MfG1xwFWmgbtmCyEF" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Main <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (-0.5, -0.5, -0.5, -0.5)
+            float3 physics:diagonalInertia = (0.00080023805, 0.0033616899, 0.0039135935)
+            float physics:mass = 0.62
+            point3f physics:centerOfMass = (0.029807936, 0.038337298, -0.009001)
+            matrix4d xformOp:transform = ((-3.19483556536792e-16, 8.943327740673789e-17, -1, 0), (5.286431207955007e-15, -1, -8.943327740749307e-17, 0), (-0.9999999999999716, -5.286431207954844e-15, 3.1948355653700053e-16, 0), (-0.008999999999999293, 0.038338296092275, 0.20509999999999998, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MfG1xwFWmgbtmCyEF_gltf" (
+                    references = [@./meshes/_MfG1xwFWmgbtmCyEF.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MfG1xwFWmgbtmCyEF_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MfG1xwFWmgbtmCyEF.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MfG1xwFWmgbtmCyEF_gltf" (
+                        references = [@./meshes/_MfG1xwFWmgbtmCyEF.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MmTeSqYZZIFXV2OsA" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Link <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (-0.002602449, 0.35460815, -0.93501085, 0.0009869935)
+            float3 physics:diagonalInertia = (3.02913e-8, 4.570616e-7, 4.613429e-7)
+            float physics:mass = 0.006
+            point3f physics:centerOfMass = (0.033384573, 0.12004817, -0.11186999)
+            matrix4d xformOp:transform = ((0.007419571326643248, -3.234912539022636e-14, -0.9999724746018405, 0), (5.692038503201377e-15, -0.9999999999999996, 3.2392249485458836e-14, 0), (-0.9999724746018405, -5.9322184330630265e-15, -0.007419571326642915, 0), (-0.009124627645724194, 0.04147957661339049, 0.20101921687856444, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MmTeSqYZZIFXV2OsA_gltf" (
+                    references = [@./meshes/_MmTeSqYZZIFXV2OsA.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MmTeSqYZZIFXV2OsA_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MmTeSqYZZIFXV2OsA.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MmTeSqYZZIFXV2OsA_gltf" (
+                        references = [@./meshes/_MmTeSqYZZIFXV2OsA.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MqOgoznVVVm5Fuab8" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Tri Link <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (0.5965479, -0.002233829, -0.0016603931, 0.80257267)
+            float3 physics:diagonalInertia = (3.3894042e-7, 0.0000018131557, 0.0000021296828)
+            float physics:mass = 0.007999999
+            point3f physics:centerOfMass = (0.016053338, 0.1436077, -0.11656654)
+            matrix4d xformOp:transform = ((0.007419571326643273, -4.073082330881921e-14, -0.9999724746018677, 0), (1.0586515299189253e-14, -1.0000000000000384, 4.08587455835588e-14, 0), (-0.9999724746018576, -1.0704402983973326e-14, -0.007419571326642822, 0), (-0.009124627645726673, 0.04147957661339451, 0.20101921687856417, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MqOgoznVVVm5Fuab8_gltf" (
+                    references = [@./meshes/_MqOgoznVVVm5Fuab8.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MqOgoznVVVm5Fuab8_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MqOgoznVVVm5Fuab8.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MqOgoznVVVm5Fuab8_gltf" (
+                        references = [@./meshes/_MqOgoznVVVm5Fuab8.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        def Xform "_MudPDoCUz0k_u1fjV" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "IsaacLinkAPI", "PhysicsMassAPI"]
+            displayName = "Tibula <1>"
+        )
+        {
+            string isaac:nameOverride
+            quatf physics:principalAxes = (-0.002602459, 0.35460815, -0.93501085, 0.0009870192)
+            float3 physics:diagonalInertia = (3.4828966e-7, 0.000026919777, 0.000027055361)
+            float physics:mass = 0.0129995635
+            point3f physics:centerOfMass = (0.13321146, 0.12589775, -0.11007166)
+            matrix4d xformOp:transform = ((0.007388350219955186, -0.18279448498394926, -0.9831233841896347, 0), (-0.0003387200498850412, -0.9831506196008717, 0.1827970033866799, 0), (-0.9999726484008227, -0.001017564678443255, -0.007325777253649657, 0), (-0.009069105502457304, 0.043032577943750025, 0.17105558935172016, 1))
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Xform "visuals" (
+            )
+            {
+                def Xform "___meshes__MudPDoCUz0k_u1fjV_gltf" (
+                    references = [@./meshes/_MudPDoCUz0k_u1fjV.gltf@]
+                )
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "collisions"
+            {
+                def Xform "___meshes__MudPDoCUz0k_u1fjV_gltf" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    displayName = "collider: ./meshes/_MudPDoCUz0k_u1fjV.gltf"
+                )
+                {
+                    uniform token physics:approximation = "sdf"
+
+                    def Xform "___meshes__MudPDoCUz0k_u1fjV_gltf" (
+                        references = [@./meshes/_MudPDoCUz0k_u1fjV.gltf@]
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+    }
+}
+
+def Scope "visuals"
+{
+    token visibility = "invisible"
+}
+
+def Scope "colliders"
+{
+    token visibility = "invisible"
+
+    def PhysicsCollisionGroup "robotCollisionGroup"
+    {
+        prepend rel collection:colliders:includes = [</robot>]
+    }
+
+    def PhysicsCollisionGroup "collidersCollisionGroup"
+    {
+        prepend rel collection:colliders:includes = [</colliders>]
+        prepend rel physics:filteredGroups = [</colliders/robotCollisionGroup>]
+    }
+}
+
+def Scope "meshes"
+{
+    token visibility = "invisible"
+}

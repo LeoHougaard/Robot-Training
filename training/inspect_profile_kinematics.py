@@ -72,6 +72,10 @@ def main() -> None:
     env_ids = torch.arange(count, device=device, dtype=torch.long)
     directions = directions.to(device)
 
+    loaded_joint_positions = robot.data.joint_pos.torch[0].clone()
+    loaded_body_positions = robot.data.body_com_pos_w.torch[0].clone()
+    loaded_root_position = robot.data.root_pos_w.torch[0].clone()
+
     env.reset()
     default_joint = robot.data.default_joint_pos.torch.clone()
     candidates = default_joint.clone()
@@ -111,9 +115,13 @@ def main() -> None:
     # origin and places their meshes away from those frames.  COM positions
     # therefore describe the physical links more faithfully than body_pos_w.
     body_delta = robot.data.body_com_pos_w.torch - root_pos.unsqueeze(1)
+    body_origin_delta = robot.data.body_pos_w.torch - root_pos.unsqueeze(1)
     body_quat = root_quat.unsqueeze(1).expand(-1, robot.num_bodies, -1)
     body_rel = quat_apply_inverse(
         body_quat.reshape(-1, 4), body_delta.reshape(-1, 3)
+    ).reshape(count, robot.num_bodies, 3)
+    body_origin_rel = quat_apply_inverse(
+        body_quat.reshape(-1, 4), body_origin_delta.reshape(-1, 3)
     ).reshape(count, robot.num_bodies, 3)
     foot_rel = body_rel[:, base_env._feet_body_ids]
 
@@ -121,17 +129,19 @@ def main() -> None:
         profile["robot"]["forward_axis"], device=device, dtype=torch.float
     )
     forward_axis /= torch.linalg.vector_norm(forward_axis)
-    lateral_axis = torch.tensor(
-        (-forward_axis[1], forward_axis[0], 0.0),
+    up_axis = torch.tensor(
+        profile["robot"].get("up_axis", (0.0, 0.0, 1.0)),
         device=device,
         dtype=torch.float,
     )
+    up_axis /= torch.linalg.vector_norm(up_axis)
+    lateral_axis = torch.linalg.cross(up_axis, forward_axis)
 
     def semantic_xyz(value: torch.Tensor) -> list[float]:
         return [
             float(torch.dot(value, forward_axis).item()),
             float(torch.dot(value, lateral_axis).item()),
-            float(value[2].item()),
+            float(torch.dot(value, up_axis).item()),
         ]
 
     semantic_to_foot = {
@@ -164,8 +174,39 @@ def main() -> None:
         "joint_names": list(robot.joint_names),
         "policy_joint_ids": list(base_env._policy_joint_ids),
         "body_names": list(robot.body_names),
+        "root_quaternion_wxyz": [float(value) for value in root_quat[0]],
+        "nominal_body_quaternions_wxyz": {
+            name: [
+                float(value)
+                for value in robot.data.body_quat_w.torch[0, index]
+            ]
+            for index, name in enumerate(robot.body_names)
+        },
+        "nominal_joint_positions": {
+            name: float(robot.data.joint_pos.torch[0, index])
+            for index, name in enumerate(robot.joint_names)
+        },
+        "loaded_joint_positions_before_reset": {
+            name: float(loaded_joint_positions[index])
+            for index, name in enumerate(robot.joint_names)
+        },
+        "loaded_body_com_positions_before_reset": {
+            name: [float(value) for value in loaded_body_positions[index]]
+            for index, name in enumerate(robot.body_names)
+        },
+        "loaded_root_position_before_reset": [
+            float(value) for value in loaded_root_position
+        ],
+        "feet_body_ids": list(base_env._feet_body_ids),
+        "feet_body_names": [
+            robot.body_names[index] for index in base_env._feet_body_ids
+        ],
         "nominal_feet_forward_lateral_z": [
             semantic_xyz(value) for value in foot_rel[0]
+        ],
+        "nominal_foot_origins_forward_lateral_z": [
+            semantic_xyz(body_origin_rel[0, index])
+            for index in base_env._feet_body_ids
         ],
         "nominal_bodies_forward_lateral_z": {
             name: semantic_xyz(body_rel[0, index])

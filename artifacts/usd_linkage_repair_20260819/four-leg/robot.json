@@ -1,0 +1,1179 @@
+{
+  "Format": "Onshape-to-robot four-leg repair manifest v1",
+  "Source": "C:\\Users\\Leo\\Code Projects\\Robot Training\\artifacts\\usd_linkage_repair_20260819\\fixed\\robot.usda",
+  "MainBody": "_MfG1xwFWmgbtmCyEF",
+  "MountSpacingMeters": {
+    "length": 0.1882234100000005,
+    "width": 0.17999999999998978
+  },
+  "Corners": [
+    "RF",
+    "RR",
+    "LF",
+    "LR"
+  ],
+  "RigidBodies": [
+    {
+      "id": "_MfG1xwFWmgbtmCyEF",
+      "name": "Main",
+      "corner": "chassis"
+    },
+    {
+      "id": "_M5h2pOkgVaejo_GDh",
+      "name": "Femur RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MBK47NygQU_fnvKKJ",
+      "name": "Hub RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MTn8HoecFwNHGSxBF",
+      "name": "Servo link RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MYp_ZmExAGS9OwbEd",
+      "name": "Long Link RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MmTeSqYZZIFXV2OsA",
+      "name": "Link RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MqOgoznVVVm5Fuab8",
+      "name": "Tri Link RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_MudPDoCUz0k_u1fjV",
+      "name": "Tibula RF",
+      "corner": "RF"
+    },
+    {
+      "id": "_M5h2pOkgVaejo_GDh_RR",
+      "name": "Femur RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MBK47NygQU_fnvKKJ_RR",
+      "name": "Hub RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MTn8HoecFwNHGSxBF_RR",
+      "name": "Servo link RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MYp_ZmExAGS9OwbEd_RR",
+      "name": "Long Link RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MmTeSqYZZIFXV2OsA_RR",
+      "name": "Link RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MqOgoznVVVm5Fuab8_RR",
+      "name": "Tri Link RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_MudPDoCUz0k_u1fjV_RR",
+      "name": "Tibula RR",
+      "corner": "RR"
+    },
+    {
+      "id": "_M5h2pOkgVaejo_GDh_LF",
+      "name": "Femur LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MBK47NygQU_fnvKKJ_LF",
+      "name": "Hub LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MTn8HoecFwNHGSxBF_LF",
+      "name": "Servo link LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MYp_ZmExAGS9OwbEd_LF",
+      "name": "Long Link LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MmTeSqYZZIFXV2OsA_LF",
+      "name": "Link LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MqOgoznVVVm5Fuab8_LF",
+      "name": "Tri Link LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_MudPDoCUz0k_u1fjV_LF",
+      "name": "Tibula LF",
+      "corner": "LF"
+    },
+    {
+      "id": "_M5h2pOkgVaejo_GDh_LR",
+      "name": "Femur LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MBK47NygQU_fnvKKJ_LR",
+      "name": "Hub LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MTn8HoecFwNHGSxBF_LR",
+      "name": "Servo link LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MYp_ZmExAGS9OwbEd_LR",
+      "name": "Long Link LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MmTeSqYZZIFXV2OsA_LR",
+      "name": "Link LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MqOgoznVVVm5Fuab8_LR",
+      "name": "Tri Link LR",
+      "corner": "LR"
+    },
+    {
+      "id": "_MudPDoCUz0k_u1fjV_LR",
+      "name": "Tibula LR",
+      "corner": "LR"
+    }
+  ],
+  "Joints": [
+    {
+      "id": "_MWF43qCtwcSwtZPvL",
+      "name": "Main Hub RF",
+      "body0": "_MfG1xwFWmgbtmCyEF",
+      "body1": "_MBK47NygQU_fnvKKJ",
+      "lowerLimitDeg": -50.000042,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.08999999999999439,
+        -0.09411170500000048,
+        0.18709999999999993
+      ],
+      "otherAnchor": [
+        0.08999999999999429,
+        -0.094111705,
+        0.18710000000000016
+      ],
+      "anchorMismatchMm": 5.304510956487649e-13,
+      "sourceAnchorMismatchMm": 2.1138016631127877e-13,
+      "axis": [
+        -2.1580965987973018e-14,
+        -1.0,
+        -8.94332774074845e-17
+      ],
+      "axisAlignment": 1.0
+    },
+    {
+      "id": "_Mj8z1U07QjKsN_b8o",
+      "name": "Hub Tibula RF",
+      "body0": "_M5h2pOkgVaejo_GDh",
+      "body1": "_MBK47NygQU_fnvKKJ",
+      "lowerLimitDeg": -40.00003,
+      "upperLimitDeg": 42.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.10545012400877596,
+        -0.13999999536921268,
+        0.16245858394323565
+      ],
+      "otherAnchor": [
+        0.10545012400674969,
+        -0.13999999499999993,
+        0.16245858503231553
+      ],
+      "anchorMismatchMm": 1.1499639754769292e-06,
+      "sourceAnchorMismatchMm": 1.1499639546236696e-06,
+      "axis": [
+        -0.9999982832284792,
+        1.9776573607910297e-11,
+        -0.0018529814092206514
+      ],
+      "axisAlignment": 0.999999999999976
+    },
+    {
+      "id": "_M5Wr42GBylD274sgD",
+      "name": "Femure Tibula RF",
+      "body0": "_MudPDoCUz0k_u1fjV",
+      "body1": "_M5h2pOkgVaejo_GDh",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        0.10523126182377937,
+        -0.06935252543266643,
+        0.0916842274057852
+      ],
+      "otherAnchor": [
+        0.10523126182377987,
+        -0.06935252543266854,
+        0.09168422740578372
+      ],
+      "anchorMismatchMm": 2.627597050088503e-12,
+      "sourceAnchorMismatchMm": 0.7000008643563657,
+      "axis": [
+        0.9999982832284755,
+        -1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000056
+    },
+    {
+      "id": "_MDg4yzrzmMKgaKG7L",
+      "name": "Hub Servo Link RF",
+      "body0": "_MBK47NygQU_fnvKKJ",
+      "body1": "_MTn8HoecFwNHGSxBF",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.10040433237334208,
+        -0.13999999499999993,
+        0.1871692775930436
+      ],
+      "otherAnchor": [
+        0.10040433237537111,
+        -0.13999999538809044,
+        0.18716927650571052
+      ],
+      "anchorMismatchMm": 1.1545179052044864e-06,
+      "sourceAnchorMismatchMm": 1.1545178522205357e-06,
+      "axis": [
+        0.9999982832284501,
+        5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999937
+    },
+    {
+      "id": "_M0vdxvTALZGcsulyT",
+      "name": "Hub Link RF",
+      "body0": "_MBK47NygQU_fnvKKJ",
+      "body1": "_MmTeSqYZZIFXV2OsA",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        0.1004532289123835,
+        -0.08842935473944293,
+        0.1607764479070702
+      ],
+      "otherAnchor": [
+        0.10045322891238982,
+        -0.08842935473944263,
+        0.16077644790707013
+      ],
+      "anchorMismatchMm": 6.335525530684704e-12,
+      "sourceAnchorMismatchMm": 4.589305557369563,
+      "axis": [
+        0.9999982832284501,
+        5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999717
+    },
+    {
+      "id": "_MitydmClKjpTUmzPr",
+      "name": "Servo Link Tri Link RF",
+      "body0": "_MTn8HoecFwNHGSxBF",
+      "body1": "_MqOgoznVVVm5Fuab8",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10547584203007841,
+        -0.12028047436897935,
+        0.20254555225478016
+      ],
+      "otherAnchor": [
+        0.10547584203221258,
+        -0.12028047447889798,
+        0.20254555110037017
+      ],
+      "anchorMismatchMm": 1.159633162524303e-06,
+      "sourceAnchorMismatchMm": 1.1596331612668245e-06,
+      "axis": [
+        0.9999982832284967,
+        -1.9771695782336285e-11,
+        0.0018529814092207858
+      ],
+      "axisAlignment": 1.0000000000000389
+    },
+    {
+      "id": "_M4g_rzxEjEDqusbKR",
+      "name": "Link Tri Link RF",
+      "body0": "_MmTeSqYZZIFXV2OsA",
+      "body1": "_MqOgoznVVVm5Fuab8",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10552164477294437,
+        -0.07028046447888509,
+        0.1778255946604258
+      ],
+      "otherAnchor": [
+        0.1055216447729484,
+        -0.07028046447889405,
+        0.17782559466042452
+      ],
+      "anchorMismatchMm": 9.909556801614106e-12,
+      "sourceAnchorMismatchMm": 9.62478363149262e-12,
+      "axis": [
+        -0.9999982832284781,
+        -5.752050967312149e-15,
+        -0.0018529814073983165
+      ],
+      "axisAlignment": 1.0000000000000167
+    },
+    {
+      "id": "_MszDercQQBi5MYKja",
+      "name": "Tri Link Long Link RF",
+      "body0": "_MqOgoznVVVm5Fuab8",
+      "body1": "_MYp_ZmExAGS9OwbEd",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.1096216412721836,
+        -0.12028047447889895,
+        0.17783319008595863
+      ],
+      "otherAnchor": [
+        0.10962164127002227,
+        -0.12028047449296456,
+        0.17783319125179234
+      ],
+      "anchorMismatchMm": 1.165920557287878e-06,
+      "sourceAnchorMismatchMm": 1.1659205258519997e-06,
+      "axis": [
+        0.9999982832284953,
+        1.0477503783098e-14,
+        0.001852981407398052
+      ],
+      "axisAlignment": 1.0000000000000357
+    },
+    {
+      "id": "_MH4FFqSxUVid8MSHx",
+      "name": "Long Link Tibula RF",
+      "body0": "_MudPDoCUz0k_u1fjV",
+      "body1": "_MYp_ZmExAGS9OwbEd",
+      "lowerLimitDeg": -60.00005,
+      "upperLimitDeg": 60.00005,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10485279135228243,
+        -0.04963299346960308,
+        0.10705040858023657
+      ],
+      "otherAnchor": [
+        0.10485279135228544,
+        -0.049632993469605174,
+        0.10705040858023385
+      ],
+      "anchorMismatchMm": 4.567162889111839e-12,
+      "sourceAnchorMismatchMm": 4.790973353109107e-12,
+      "axis": [
+        0.9999982832284755,
+        -1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000195
+    },
+    {
+      "id": "_MWF43qCtwcSwtZPvL_RR",
+      "name": "Main Hub RR",
+      "body0": "_MfG1xwFWmgbtmCyEF",
+      "body1": "_MBK47NygQU_fnvKKJ_RR",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 50.000042,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.08999999999999439,
+        0.09411170500000003,
+        0.18709999999999996
+      ],
+      "otherAnchor": [
+        0.08999999999999429,
+        0.094111705,
+        0.18710000000000016
+      ],
+      "anchorMismatchMm": 2.1898779786837934e-13,
+      "sourceAnchorMismatchMm": 1.8619006149354548e-13,
+      "axis": [
+        3.290524083914929e-14,
+        1.0,
+        8.943327740748087e-17
+      ],
+      "axisAlignment": 1.0
+    },
+    {
+      "id": "_Mj8z1U07QjKsN_b8o_RR",
+      "name": "Hub Tibula RR",
+      "body0": "_M5h2pOkgVaejo_GDh_RR",
+      "body1": "_MBK47NygQU_fnvKKJ_RR",
+      "lowerLimitDeg": -42.00004,
+      "upperLimitDeg": 40.00003,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.10545012400877596,
+        0.13999999536921268,
+        0.16245858394323565
+      ],
+      "otherAnchor": [
+        0.10545012400674969,
+        0.13999999499999993,
+        0.16245858503231553
+      ],
+      "anchorMismatchMm": 1.1499639754769292e-06,
+      "sourceAnchorMismatchMm": 1.1499639546236696e-06,
+      "axis": [
+        -0.9999982832284792,
+        -1.9776573607910297e-11,
+        -0.0018529814092206514
+      ],
+      "axisAlignment": 0.999999999999976
+    },
+    {
+      "id": "_M5Wr42GBylD274sgD_RR",
+      "name": "Femure Tibula RR",
+      "body0": "_MudPDoCUz0k_u1fjV_RR",
+      "body1": "_M5h2pOkgVaejo_GDh_RR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        0.10523126182377937,
+        0.06935252543266643,
+        0.0916842274057852
+      ],
+      "otherAnchor": [
+        0.10523126182377987,
+        0.06935252543266854,
+        0.09168422740578372
+      ],
+      "anchorMismatchMm": 2.627597050088503e-12,
+      "sourceAnchorMismatchMm": 0.7000008643563657,
+      "axis": [
+        0.9999982832284755,
+        1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000056
+    },
+    {
+      "id": "_MDg4yzrzmMKgaKG7L_RR",
+      "name": "Hub Servo Link RR",
+      "body0": "_MBK47NygQU_fnvKKJ_RR",
+      "body1": "_MTn8HoecFwNHGSxBF_RR",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        0.10040433237334208,
+        0.13999999499999993,
+        0.1871692775930436
+      ],
+      "otherAnchor": [
+        0.10040433237537111,
+        0.13999999538809044,
+        0.18716927650571052
+      ],
+      "anchorMismatchMm": 1.1545179052044864e-06,
+      "sourceAnchorMismatchMm": 1.1545178522205357e-06,
+      "axis": [
+        0.9999982832284501,
+        -5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999937
+    },
+    {
+      "id": "_M0vdxvTALZGcsulyT_RR",
+      "name": "Hub Link RR",
+      "body0": "_MBK47NygQU_fnvKKJ_RR",
+      "body1": "_MmTeSqYZZIFXV2OsA_RR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        0.1004532289123835,
+        0.08842935473944293,
+        0.1607764479070702
+      ],
+      "otherAnchor": [
+        0.10045322891238982,
+        0.08842935473944263,
+        0.16077644790707013
+      ],
+      "anchorMismatchMm": 6.335525530684704e-12,
+      "sourceAnchorMismatchMm": 4.589305557369563,
+      "axis": [
+        0.9999982832284501,
+        -5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999717
+    },
+    {
+      "id": "_MitydmClKjpTUmzPr_RR",
+      "name": "Servo Link Tri Link RR",
+      "body0": "_MTn8HoecFwNHGSxBF_RR",
+      "body1": "_MqOgoznVVVm5Fuab8_RR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10547584203007841,
+        0.12028047436897935,
+        0.20254555225478016
+      ],
+      "otherAnchor": [
+        0.10547584203221258,
+        0.12028047447889798,
+        0.20254555110037017
+      ],
+      "anchorMismatchMm": 1.159633162524303e-06,
+      "sourceAnchorMismatchMm": 1.1596331612668245e-06,
+      "axis": [
+        0.9999982832284967,
+        1.9771695782336285e-11,
+        0.0018529814092207858
+      ],
+      "axisAlignment": 1.0000000000000389
+    },
+    {
+      "id": "_M4g_rzxEjEDqusbKR_RR",
+      "name": "Link Tri Link RR",
+      "body0": "_MmTeSqYZZIFXV2OsA_RR",
+      "body1": "_MqOgoznVVVm5Fuab8_RR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10552164477294437,
+        0.07028046447888509,
+        0.1778255946604258
+      ],
+      "otherAnchor": [
+        0.1055216447729484,
+        0.07028046447889405,
+        0.17782559466042452
+      ],
+      "anchorMismatchMm": 9.909556801614106e-12,
+      "sourceAnchorMismatchMm": 9.62478363149262e-12,
+      "axis": [
+        -0.9999982832284781,
+        5.752050967312149e-15,
+        -0.0018529814073983165
+      ],
+      "axisAlignment": 1.0000000000000167
+    },
+    {
+      "id": "_MszDercQQBi5MYKja_RR",
+      "name": "Tri Link Long Link RR",
+      "body0": "_MqOgoznVVVm5Fuab8_RR",
+      "body1": "_MYp_ZmExAGS9OwbEd_RR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.1096216412721836,
+        0.12028047447889895,
+        0.17783319008595863
+      ],
+      "otherAnchor": [
+        0.10962164127002227,
+        0.12028047449296456,
+        0.17783319125179234
+      ],
+      "anchorMismatchMm": 1.165920557287878e-06,
+      "sourceAnchorMismatchMm": 1.1659205258519997e-06,
+      "axis": [
+        0.9999982832284953,
+        -1.0477503783098e-14,
+        0.001852981407398052
+      ],
+      "axisAlignment": 1.0000000000000357
+    },
+    {
+      "id": "_MH4FFqSxUVid8MSHx_RR",
+      "name": "Long Link Tibula RR",
+      "body0": "_MudPDoCUz0k_u1fjV_RR",
+      "body1": "_MYp_ZmExAGS9OwbEd_RR",
+      "lowerLimitDeg": -60.00005,
+      "upperLimitDeg": 60.00005,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        0.10485279135228243,
+        0.04963299346960308,
+        0.10705040858023657
+      ],
+      "otherAnchor": [
+        0.10485279135228544,
+        0.049632993469605174,
+        0.10705040858023385
+      ],
+      "anchorMismatchMm": 4.567162889111839e-12,
+      "sourceAnchorMismatchMm": 4.790973353109107e-12,
+      "axis": [
+        0.9999982832284755,
+        1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000195
+    },
+    {
+      "id": "_MWF43qCtwcSwtZPvL_LF",
+      "name": "Main Hub LF",
+      "body0": "_MfG1xwFWmgbtmCyEF",
+      "body1": "_MBK47NygQU_fnvKKJ_LF",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 50.000042,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.08999999999999539,
+        -0.09411170500000042,
+        0.18709999999999988
+      ],
+      "otherAnchor": [
+        -0.08999999999999429,
+        -0.094111705,
+        0.18710000000000016
+      ],
+      "anchorMismatchMm": 1.2051322628916773e-12,
+      "sourceAnchorMismatchMm": 1.1226435567921848e-12,
+      "axis": [
+        -3.290524083914929e-14,
+        -1.0,
+        -8.943327740748087e-17
+      ],
+      "axisAlignment": 1.0
+    },
+    {
+      "id": "_Mj8z1U07QjKsN_b8o_LF",
+      "name": "Hub Tibula LF",
+      "body0": "_M5h2pOkgVaejo_GDh_LF",
+      "body1": "_MBK47NygQU_fnvKKJ_LF",
+      "lowerLimitDeg": -42.00004,
+      "upperLimitDeg": 40.00003,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.10545012400877596,
+        -0.13999999536921268,
+        0.16245858394323565
+      ],
+      "otherAnchor": [
+        -0.10545012400674969,
+        -0.13999999499999993,
+        0.16245858503231553
+      ],
+      "anchorMismatchMm": 1.1499639754769292e-06,
+      "sourceAnchorMismatchMm": 1.1499639546236696e-06,
+      "axis": [
+        0.9999982832284792,
+        1.9776573607910297e-11,
+        -0.0018529814092206514
+      ],
+      "axisAlignment": 0.999999999999976
+    },
+    {
+      "id": "_M5Wr42GBylD274sgD_LF",
+      "name": "Femure Tibula LF",
+      "body0": "_MudPDoCUz0k_u1fjV_LF",
+      "body1": "_M5h2pOkgVaejo_GDh_LF",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        -0.10523126182377937,
+        -0.06935252543266643,
+        0.0916842274057852
+      ],
+      "otherAnchor": [
+        -0.10523126182377987,
+        -0.06935252543266854,
+        0.09168422740578372
+      ],
+      "anchorMismatchMm": 2.627597050088503e-12,
+      "sourceAnchorMismatchMm": 0.7000008643563657,
+      "axis": [
+        -0.9999982832284755,
+        -1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000056
+    },
+    {
+      "id": "_MDg4yzrzmMKgaKG7L_LF",
+      "name": "Hub Servo Link LF",
+      "body0": "_MBK47NygQU_fnvKKJ_LF",
+      "body1": "_MTn8HoecFwNHGSxBF_LF",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.10040433237334208,
+        -0.13999999499999993,
+        0.1871692775930436
+      ],
+      "otherAnchor": [
+        -0.10040433237537111,
+        -0.13999999538809044,
+        0.18716927650571052
+      ],
+      "anchorMismatchMm": 1.1545179052044864e-06,
+      "sourceAnchorMismatchMm": 1.1545178522205357e-06,
+      "axis": [
+        -0.9999982832284501,
+        5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999937
+    },
+    {
+      "id": "_M0vdxvTALZGcsulyT_LF",
+      "name": "Hub Link LF",
+      "body0": "_MBK47NygQU_fnvKKJ_LF",
+      "body1": "_MmTeSqYZZIFXV2OsA_LF",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        -0.1004532289123835,
+        -0.08842935473944293,
+        0.1607764479070702
+      ],
+      "otherAnchor": [
+        -0.10045322891238982,
+        -0.08842935473944263,
+        0.16077644790707013
+      ],
+      "anchorMismatchMm": 6.335525530684704e-12,
+      "sourceAnchorMismatchMm": 4.589305557369563,
+      "axis": [
+        -0.9999982832284501,
+        5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999717
+    },
+    {
+      "id": "_MitydmClKjpTUmzPr_LF",
+      "name": "Servo Link Tri Link LF",
+      "body0": "_MTn8HoecFwNHGSxBF_LF",
+      "body1": "_MqOgoznVVVm5Fuab8_LF",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10547584203007841,
+        -0.12028047436897935,
+        0.20254555225478016
+      ],
+      "otherAnchor": [
+        -0.10547584203221258,
+        -0.12028047447889798,
+        0.20254555110037017
+      ],
+      "anchorMismatchMm": 1.159633162524303e-06,
+      "sourceAnchorMismatchMm": 1.1596331612668245e-06,
+      "axis": [
+        -0.9999982832284967,
+        -1.9771695782336285e-11,
+        0.0018529814092207858
+      ],
+      "axisAlignment": 1.0000000000000389
+    },
+    {
+      "id": "_M4g_rzxEjEDqusbKR_LF",
+      "name": "Link Tri Link LF",
+      "body0": "_MmTeSqYZZIFXV2OsA_LF",
+      "body1": "_MqOgoznVVVm5Fuab8_LF",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10552164477294437,
+        -0.07028046447888509,
+        0.1778255946604258
+      ],
+      "otherAnchor": [
+        -0.1055216447729484,
+        -0.07028046447889405,
+        0.17782559466042452
+      ],
+      "anchorMismatchMm": 9.909556801614106e-12,
+      "sourceAnchorMismatchMm": 9.62478363149262e-12,
+      "axis": [
+        0.9999982832284781,
+        -5.752050967312149e-15,
+        -0.0018529814073983165
+      ],
+      "axisAlignment": 1.0000000000000167
+    },
+    {
+      "id": "_MszDercQQBi5MYKja_LF",
+      "name": "Tri Link Long Link LF",
+      "body0": "_MqOgoznVVVm5Fuab8_LF",
+      "body1": "_MYp_ZmExAGS9OwbEd_LF",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.1096216412721836,
+        -0.12028047447889895,
+        0.17783319008595863
+      ],
+      "otherAnchor": [
+        -0.10962164127002227,
+        -0.12028047449296456,
+        0.17783319125179234
+      ],
+      "anchorMismatchMm": 1.165920557287878e-06,
+      "sourceAnchorMismatchMm": 1.1659205258519997e-06,
+      "axis": [
+        -0.9999982832284953,
+        1.0477503783098e-14,
+        0.001852981407398052
+      ],
+      "axisAlignment": 1.0000000000000357
+    },
+    {
+      "id": "_MH4FFqSxUVid8MSHx_LF",
+      "name": "Long Link Tibula LF",
+      "body0": "_MudPDoCUz0k_u1fjV_LF",
+      "body1": "_MYp_ZmExAGS9OwbEd_LF",
+      "lowerLimitDeg": -60.00005,
+      "upperLimitDeg": 60.00005,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10485279135228243,
+        -0.04963299346960308,
+        0.10705040858023657
+      ],
+      "otherAnchor": [
+        -0.10485279135228544,
+        -0.049632993469605174,
+        0.10705040858023385
+      ],
+      "anchorMismatchMm": 4.567162889111839e-12,
+      "sourceAnchorMismatchMm": 4.790973353109107e-12,
+      "axis": [
+        -0.9999982832284755,
+        -1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000195
+    },
+    {
+      "id": "_MWF43qCtwcSwtZPvL_LR",
+      "name": "Main Hub LR",
+      "body0": "_MfG1xwFWmgbtmCyEF",
+      "body1": "_MBK47NygQU_fnvKKJ_LR",
+      "lowerLimitDeg": -50.000042,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.08999999999999539,
+        0.09411170499999998,
+        0.1870999999999999
+      ],
+      "otherAnchor": [
+        -0.08999999999999429,
+        0.094111705,
+        0.18710000000000016
+      ],
+      "anchorMismatchMm": 1.1247859265068954e-12,
+      "sourceAnchorMismatchMm": 1.1227293300708973e-12,
+      "axis": [
+        -3.337507373097067e-14,
+        1.0000000000000002,
+        8.943327740750207e-17
+      ],
+      "axisAlignment": 1.0000000000000002
+    },
+    {
+      "id": "_Mj8z1U07QjKsN_b8o_LR",
+      "name": "Hub Tibula LR",
+      "body0": "_M5h2pOkgVaejo_GDh_LR",
+      "body1": "_MBK47NygQU_fnvKKJ_LR",
+      "lowerLimitDeg": -40.00003,
+      "upperLimitDeg": 42.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.10545012400877596,
+        0.13999999536921268,
+        0.16245858394323565
+      ],
+      "otherAnchor": [
+        -0.10545012400674969,
+        0.13999999499999993,
+        0.16245858503231553
+      ],
+      "anchorMismatchMm": 1.1499639754769292e-06,
+      "sourceAnchorMismatchMm": 1.1499639546236696e-06,
+      "axis": [
+        0.9999982832284792,
+        -1.9776573607910297e-11,
+        -0.0018529814092206514
+      ],
+      "axisAlignment": 0.999999999999976
+    },
+    {
+      "id": "_M5Wr42GBylD274sgD_LR",
+      "name": "Femure Tibula LR",
+      "body0": "_MudPDoCUz0k_u1fjV_LR",
+      "body1": "_M5h2pOkgVaejo_GDh_LR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        -0.10523126182377937,
+        0.06935252543266643,
+        0.0916842274057852
+      ],
+      "otherAnchor": [
+        -0.10523126182377987,
+        0.06935252543266854,
+        0.09168422740578372
+      ],
+      "anchorMismatchMm": 2.627597050088503e-12,
+      "sourceAnchorMismatchMm": 0.7000008643563657,
+      "axis": [
+        -0.9999982832284755,
+        1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000056
+    },
+    {
+      "id": "_MDg4yzrzmMKgaKG7L_LR",
+      "name": "Hub Servo Link LR",
+      "body0": "_MBK47NygQU_fnvKKJ_LR",
+      "body1": "_MTn8HoecFwNHGSxBF_LR",
+      "lowerLimitDeg": -45.00004,
+      "upperLimitDeg": 45.00004,
+      "excludedFromArticulation": false,
+      "driven": true,
+      "anchor": [
+        -0.10040433237334208,
+        0.13999999499999993,
+        0.1871692775930436
+      ],
+      "otherAnchor": [
+        -0.10040433237537111,
+        0.13999999538809044,
+        0.18716927650571052
+      ],
+      "anchorMismatchMm": 1.1545179052044864e-06,
+      "sourceAnchorMismatchMm": 1.1545178522205357e-06,
+      "axis": [
+        -0.9999982832284501,
+        -5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999937
+    },
+    {
+      "id": "_M0vdxvTALZGcsulyT_LR",
+      "name": "Hub Link LR",
+      "body0": "_MBK47NygQU_fnvKKJ_LR",
+      "body1": "_MmTeSqYZZIFXV2OsA_LR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": true,
+      "driven": false,
+      "anchor": [
+        -0.1004532289123835,
+        0.08842935473944293,
+        0.1607764479070702
+      ],
+      "otherAnchor": [
+        -0.10045322891238982,
+        0.08842935473944263,
+        0.16077644790707013
+      ],
+      "anchorMismatchMm": 6.335525530684704e-12,
+      "sourceAnchorMismatchMm": 4.589305557369563,
+      "axis": [
+        -0.9999982832284501,
+        -5.191360986299423e-15,
+        0.0018529814073975958
+      ],
+      "axisAlignment": 0.9999999999999717
+    },
+    {
+      "id": "_MitydmClKjpTUmzPr_LR",
+      "name": "Servo Link Tri Link LR",
+      "body0": "_MTn8HoecFwNHGSxBF_LR",
+      "body1": "_MqOgoznVVVm5Fuab8_LR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10547584203007841,
+        0.12028047436897935,
+        0.20254555225478016
+      ],
+      "otherAnchor": [
+        -0.10547584203221258,
+        0.12028047447889798,
+        0.20254555110037017
+      ],
+      "anchorMismatchMm": 1.159633162524303e-06,
+      "sourceAnchorMismatchMm": 1.1596331612668245e-06,
+      "axis": [
+        -0.9999982832284967,
+        1.9771695782336285e-11,
+        0.0018529814092207858
+      ],
+      "axisAlignment": 1.0000000000000389
+    },
+    {
+      "id": "_M4g_rzxEjEDqusbKR_LR",
+      "name": "Link Tri Link LR",
+      "body0": "_MmTeSqYZZIFXV2OsA_LR",
+      "body1": "_MqOgoznVVVm5Fuab8_LR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10552164477294437,
+        0.07028046447888509,
+        0.1778255946604258
+      ],
+      "otherAnchor": [
+        -0.1055216447729484,
+        0.07028046447889405,
+        0.17782559466042452
+      ],
+      "anchorMismatchMm": 9.909556801614106e-12,
+      "sourceAnchorMismatchMm": 9.62478363149262e-12,
+      "axis": [
+        0.9999982832284781,
+        5.752050967312149e-15,
+        -0.0018529814073983165
+      ],
+      "axisAlignment": 1.0000000000000167
+    },
+    {
+      "id": "_MszDercQQBi5MYKja_LR",
+      "name": "Tri Link Long Link LR",
+      "body0": "_MqOgoznVVVm5Fuab8_LR",
+      "body1": "_MYp_ZmExAGS9OwbEd_LR",
+      "lowerLimitDeg": -572958.25,
+      "upperLimitDeg": 572958.25,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.1096216412721836,
+        0.12028047447889895,
+        0.17783319008595863
+      ],
+      "otherAnchor": [
+        -0.10962164127002227,
+        0.12028047449296456,
+        0.17783319125179234
+      ],
+      "anchorMismatchMm": 1.165920557287878e-06,
+      "sourceAnchorMismatchMm": 1.1659205258519997e-06,
+      "axis": [
+        -0.9999982832284953,
+        -1.0477503783098e-14,
+        0.001852981407398052
+      ],
+      "axisAlignment": 1.0000000000000357
+    },
+    {
+      "id": "_MH4FFqSxUVid8MSHx_LR",
+      "name": "Long Link Tibula LR",
+      "body0": "_MudPDoCUz0k_u1fjV_LR",
+      "body1": "_MYp_ZmExAGS9OwbEd_LR",
+      "lowerLimitDeg": -60.00005,
+      "upperLimitDeg": 60.00005,
+      "excludedFromArticulation": false,
+      "driven": false,
+      "anchor": [
+        -0.10485279135228243,
+        0.04963299346960308,
+        0.10705040858023657
+      ],
+      "otherAnchor": [
+        -0.10485279135228544,
+        0.049632993469605174,
+        0.10705040858023385
+      ],
+      "anchorMismatchMm": 4.567162889111839e-12,
+      "sourceAnchorMismatchMm": 4.790973353109107e-12,
+      "axis": [
+        -0.9999982832284755,
+        1.9776459116160883e-11,
+        0.0018529814092212637
+      ],
+      "axisAlignment": 1.0000000000000195
+    }
+  ],
+  "ActuatorSettings": {
+    "maxTorqueNm": 1.37,
+    "maxVelocityRadPerSecond": 8.0,
+    "stiffness": 22.0,
+    "damping": 0.8,
+    "armature": 0.001
+  }
+}

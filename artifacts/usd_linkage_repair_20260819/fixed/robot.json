@@ -1,0 +1,4265 @@
+{
+  "Href": "/documents/7b80ed64f807d1359b83317e/w/19903ba8c59b13766f0d2df0/e/21462cb4d15da3f1ff18442c?configuration=",
+  "Did": "7b80ed64f807d1359b83317e",
+  "Wvm": "w",
+  "Wvmid": "19903ba8c59b13766f0d2df0",
+  "Eid": "21462cb4d15da3f1ff18442c",
+  "Configuration": "",
+  "Joints": [
+    {
+      "Name": "Main Hub RF",
+      "Type": "REVOLUTE",
+      "Id": "MWF43qCtwcSwtZPvL",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "-45 deg",
+      "MaxAngle": "50 deg",
+      "Driven": true,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Main Hub RF",
+        "FeatureId": "MWF43qCtwcSwtZPvL",
+        "Parameters": [
+          {
+            "NodeId": "YcWlZ0+Gs1ZWU4Ky",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "6XLhrUvnGIMxZi+A",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Vq7JE5mMeuoi12YJ",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "OzurZb6Vhb3Tv9+X",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NBjIfG47Ufgoli5+",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "N2D4/VOrIKJ2DsM3",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "9t4JtWk8hTs4XE6j",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "CgLAaL97Myb5E9I3",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "2Cf5TYM4z3kaOcjn",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "JV+U2k2bROEvt54R",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "61j9OXblapKnid/X",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "O2jLkUzYd433JPDI",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "9uiu5jFL3+N+0AfZ",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "p5KAW4SLQ4wsBtxO",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "iBUcP/iE/096b8W6",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "FmW0RGwriHKaMAUG",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "8dq6pRwDZEthjBry",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "dQ6StPmKXE0swBXc",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "CC8CPdUpuvdpLZXA",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "wPediCsgESMfAxPj",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-45 deg"
+          },
+          {
+            "NodeId": "o7lW1mQ1+qiZqtHB",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "50 deg"
+          },
+          {
+            "NodeId": "9tut4B6ANB+TYOu0",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Er10P9MIE2JbDm9g",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "HsNPzMHofutdmXNK",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "EzQHXV5kHndsggSl",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s+Aj333Y7iYJa298",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Hub Tibula RF",
+      "Type": "REVOLUTE",
+      "Id": "Mj8z1U07QjKsN/b8o",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "-42 deg",
+      "MaxAngle": "40 deg",
+      "Driven": true,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Hub Tibula RF",
+        "FeatureId": "Mj8z1U07QjKsN/b8o",
+        "Parameters": [
+          {
+            "NodeId": "Ejl5/floRgYc/Z53",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "OM1VRo+elN+DKkTj",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "B1c3XkNU+tBinjgq",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "diTQ8u6mYRsqT1VS",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "bMdx5fxoreirzF60",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "YLlVtxIw2sFhIwfv",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "CUUZhY7c4PcQOxCf",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "AxGJ2L661WILzRaC",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "NJ5jQ7O7r5wsAYr9",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "bBjwxtRNWIfG8U72",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "btOe7ARDQxyPWOd1",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "I9e2zh2rvm/r3tgM",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "lXP8lJAN0vbfV5pX",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RG2VRLl9JfN50qkE",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ZBoGPC6bBcSyIlUi",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "kqrvxIav3veU9Cc9",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "w4vJKhs2wF4u6Fb5",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "gdnyaYOicULtBK6D",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "nRhyKcgmd6iNHIxB",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Wz7Z6PiH+rxkAEXC",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-42 deg"
+          },
+          {
+            "NodeId": "dsl+1Jv5uuiYA6cv",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "40 deg"
+          },
+          {
+            "NodeId": "Y5K9WoQtuxfRAY+i",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "JGrYN1w1zEGBIfgi",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Kb8ZScKdbN0O9d44",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "QyRIFUNkCOiCyB0E",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "gZemJ5tRQasxfcUw",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Femure Tibula RF",
+      "Type": "REVOLUTE",
+      "Id": "M5Wr42GBylD274sgD",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "",
+      "MaxAngle": "",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Femure Tibula RF",
+        "FeatureId": "M5Wr42GBylD274sgD",
+        "Parameters": [
+          {
+            "NodeId": "cVrlb3zYtq9sn5KG",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "giH5VlNv4UPDCt49",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "SSKr0A1ZpQZY1YxJ",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "0Fak1J1KIAvH6/WI",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "iH0XeDZpkW9DgNYN",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "mqzZP/7MnwgyN7QT",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uofrytk6cvzY5A2Y",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "DqekLAOgfc76mOwn",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "oovFl9EQofI1QHFb",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s0xZ6A3BhuvJ+gJL",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GzeN3m/gftz0jdge",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+1Ao/vXlygHNVFjc",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uZ8cuNA/1Mw2ejM/",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+BY2k+F7CT+ZQCT4",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GqDJMfl5s7kiZxOO",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "I8VPCFPcPk8eHaLE",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "kTzRVemv7yIfVlPa",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "fSJQvV8j67ASUyis",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "p3QZhrZ1d2TVOmfk",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "F8oDjGl3nfvltCg2",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "UKSDJdJSkHdsudKx",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GOTs8CjSfftj/sMT",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "cXnoZqLVn/nFhIY7",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "TO5H3y8dCjrQ7DOD",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "5fY3hBcm5Cz6Lp7J",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "xO4ScAUspwxPU7wz",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Hub Servo Link RF",
+      "Type": "REVOLUTE",
+      "Id": "MDg4yzrzmMKgaKG7L",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "(-pi/4) rad",
+      "MaxAngle": "(pi/4) rad",
+      "Driven": true,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Hub Servo Link RF",
+        "FeatureId": "MDg4yzrzmMKgaKG7L",
+        "Parameters": [
+          {
+            "NodeId": "WG3QN9ZUGlHu4mRr",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "q8VtRXCit/0Iei1E",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "i969X74FPvL91FLY",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "IKBlw5s+C0doTrAB",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RYPq0zPXA35xRiXk",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "pcZ4TTB32TWciX5l",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "xWi8Y7NqkTIKC/kB",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "0F8hgFQ7WXUQkFIy",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WIBMXTA2hk9ODu8q",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "KVOibeEpVLQKqEfN",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "WXWDWC20oo1W3hGO",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Cj8gfDqylcpqCTr7",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "8Y/2UhR28SVvX0n4",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "vGSb+j/9ErZ4TZdP",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "F+P2qOGSHgnVDs3F",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Y92MLoqlTqaGWtMR",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ShJb3c2Mk4TYroBW",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "KpOpgrIUWhk0Foh8",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "A+qBV3nlVKL5Rw36",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "9Bh/0ZF8+gVhAVqI",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "(-pi/4) rad"
+          },
+          {
+            "NodeId": "McvCfu0Qrjh31r1b",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "(pi/4) rad"
+          },
+          {
+            "NodeId": "itL+UgvyZo7s8CLA",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GKzUOqeYab7Gd0yH",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "r/kOrRSPgIV8Hn4A",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "WDWVY09aC3UpLW3y",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Nanm6ltjVsGXJwCn",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Hub Link RF",
+      "Type": "REVOLUTE",
+      "Id": "M0vdxvTALZGcsulyT",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "",
+      "MaxAngle": "",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Hub Link RF",
+        "FeatureId": "M0vdxvTALZGcsulyT",
+        "Parameters": [
+          {
+            "NodeId": "sKegfrgz/5atZYR/",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "SL9RaRKixKerCwug",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "KR1tm3YleUsEPem+",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "k2UTx+VEuRvbSoTG",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "eR1SN7lPvJpgcyJ9",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "B3RzPP9tcjQRF0DO",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ge+B9kv6iwtG5WVF",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "bDZhKnYvt6zggG9f",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "RGZz5nWgjPFIlUgt",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "FJzJIGfWcdMlJeJv",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "mFLH1jS5Jjok9Y34",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "JvxW6Qu3ZGqA6FzB",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "oW+a5uOj9xftgLZQ",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "OWIwcpISOyOQ5rrf",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "XEKRUnQfMp77zMwP",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "lUt6Qdr0v3yM6gNJ",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "78Z3L2GNolVOJfdf",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "HQsVclelXJP+K+ba",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "pYqa2llC6AtN4hu4",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WPGP4wAqAjPiKq3k",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "SWBqoOy/9N8aso/k",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "+ZuF5ZDluZNxXUES",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "aOQ+mbR2fzCEPlav",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "ED91fgTLRLCSiKhu",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "44o1zGuB86hNBCX1",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "G+khEGV5m0osBZge",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Servo Link Tri Link RF",
+      "Type": "REVOLUTE",
+      "Id": "MitydmClKjpTUmzPr",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "",
+      "MaxAngle": "",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Servo Link Tri Link RF",
+        "FeatureId": "MitydmClKjpTUmzPr",
+        "Parameters": [
+          {
+            "NodeId": "hI0CDy9X++SlmQ1S",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "HNRMz6RUN0EAxJeC",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "GDDkSz/5vOG4wApR",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "0EK/KBW+aKW14W42",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "90eP/imTY1eJMCzI",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RR5EtnGf4B8Cmv6E",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "79uQXDdS6QhInmyC",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "zPJrFfl+RYCKCTkH",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Az0Yt6z3goWzE97D",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "AZB2ZyehgxJRqsg/",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "a4bnX7Lv2yjzKqzI",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "hLg2FiU11jo9nuLd",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "IOSjooyit+fgjmvy",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "fHRjyML7n8ZZg7ky",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ZEuGliyIazCNT4/T",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "EcXFQunKtCVFgXlc",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "JzvjKZe0KzqCm0B7",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Xxg36eEtMPPaUbxZ",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "pEMo9WPy3ifeRVky",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "UvCw5RnDQQx/J1kj",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "XQYswv2FuZUXPM7s",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "4+1rl4DSKnJVL9LR",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "/+AKeuFo17V7NOeK",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "kGblomILbiGWmc1n",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "GmnTrXT9fw+kqC+Q",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Ve2qVG2PmAn/gxYl",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Link Tri Link",
+      "Type": "REVOLUTE",
+      "Id": "M4g/rzxEjEDqusbKR",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "",
+      "MaxAngle": "",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Link Tri Link",
+        "FeatureId": "M4g/rzxEjEDqusbKR",
+        "Parameters": [
+          {
+            "NodeId": "FKBb3ERzmrenP4zL",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "MDqUludyY7tOXVMm",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "nXYY59ILY8+YN8qh",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "XgzvdZHdQQWe9Ut9",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "tc875uGh7sgR1HRx",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "zlUxsVjFL8G03XDe",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "TD6yGf2l2ZLBoidr",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "QBkgaAH42JX3QeOp",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "s876MLrpy0eXCi54",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "bpbdZQH/MmaEdAcD",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "kpBuo195SgPbWGtF",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "FKyNaHMAyjweYOWU",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ixp4b2QpNeswCxBD",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "zYI2BlUQm/fn0cJK",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "qJAaxTMNfQnTGp8M",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "qRmYwyhhc2Go2CKs",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ltQgWxaPLPltHO/U",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "YD8NcrNqOGL6Rw8u",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "mUbDQaSzAM3nMCVG",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "sm6R7YqbDbOdGreu",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "8al2bQu0jOdTf6az",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "bloj4w3H8E50Owgy",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "M1DKQS/b1DbPbYzd",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "uHLy9j5rYPQUxIPE",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "oDLLK8CquzUu8pZZ",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "LGLXWhtj3QI2s/cb",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Tri Link Long Link RF",
+      "Type": "REVOLUTE",
+      "Id": "MszDercQQBi5MYKja",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "",
+      "MaxAngle": "",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Tri Link Long Link RF",
+        "FeatureId": "MszDercQQBi5MYKja",
+        "Parameters": [
+          {
+            "NodeId": "GGJWmrf8HF/IMr/f",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "17jJYaU5m1NPeeYZ",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "ja9hDqK7dWhHkWDw",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "29OJ7C0rqlM0n7G5",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "J/tkbrS2niTVgc7t",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "HlfvQJGWzV7EjYmU",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "gLTxox7b4YJtzix4",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "Ot1cKxcgcy3F4OH4",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Y0+z2/+VbkRxEFjj",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "dj/p1wdvJjEeIZ/d",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "3P39kzybUocQMVCA",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "osFi8xM0TT+kjzP6",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+q0p/1QV8JdXooeY",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "gGxSL6/LJB+LjW3W",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "UBufC4PxzPw4P9LR",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "0efH7ct9fex/XW1m",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "uXRmbR62UFAFkq8D",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "2tchvGzmtz/YlaYV",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "9WpqPkM2KxG6/ieo",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GjyCNAfuX2gNPdkN",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "oVl2YlhbHFkYBoWA",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WxIMSKSX1NM9ZDeU",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "goETr4Vzpxg+bDU9",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "5xA2/nuw1N2ziJKw",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Nrdfbx91xgKZ9aZy",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "G90uWuowlkXcUpZW",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Long Link Tibula RF",
+      "Type": "REVOLUTE",
+      "Id": "MH4FFqSxUVid8MSHx",
+      "Enabled": true,
+      "Friction": "",
+      "Stiffness": "",
+      "Damping": "",
+      "MinAngle": "-60 deg",
+      "MaxAngle": "60 deg",
+      "Driven": false,
+      "MinVelocity": "",
+      "MaxVelocity": "",
+      "MaxTorque": "",
+      "Feature": {
+        "FeatureType": "mate",
+        "Name": "Long Link Tibula RF",
+        "FeatureId": "MH4FFqSxUVid8MSHx",
+        "Parameters": [
+          {
+            "NodeId": "YL5nEFSJkNwelMv1",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "9SwM5n9QojboYufi",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "PqUNOlKmUW7uSCsR",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "4m7evbdXXLu+3Hxu",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "oRIbV8LkSwUC5AQK",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NDxcvGCa5pikn3/M",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GJCakL/4ZB4Lg6pq",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "UcqI91OpsKCO8nXC",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "b5Wm1+Y4PyddOHLZ",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Diy7FM+TVYgQLoIX",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "1/sRtG5fkAqIo5AE",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "4KcV+ugfyy+eDQfZ",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uyrpG/Y9RqDQIK7M",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Up/U0XU7leQGfBNJ",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NXKJJwnAl2zwzY23",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "tLgl3A1FY7iAJCEa",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ug/IK5u5O09aqs1y",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "7uXBGj7tXME6QTDw",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "TjzdPw3ACZBdo6bK",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "0H/BrDVNj9+kEyjE",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-60 deg"
+          },
+          {
+            "NodeId": "EXCcIFqPlrgH3Wn4",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "60 deg"
+          },
+          {
+            "NodeId": "Do3gUixYp08GpHR8",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "uzOmYj6uA/kmcjHE",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "OBN6ov+KMLHckeTc",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "2oRdLrS6iw531bCC",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s8X4aPVbWWIUGGyw",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    }
+  ],
+  "RestPositions": [
+    {
+      "Id": "—",
+      "Name": "— None —",
+      "Enabled": true
+    }
+  ],
+  "FixedInstances": [
+    {
+      "Id": "MfG1xwFWmgbtmCyEF",
+      "Name": "Main \u003c1\u003e",
+      "FastenedToGround": false
+    }
+  ],
+  "ReferencePoints": [],
+  "Overrides": {
+    "JointEnabled": {},
+    "JointFriction": {},
+    "JointStiffness": {},
+    "JointDamping": {},
+    "JointDriven": {
+      "M0vdxvTALZGcsulyT": false,
+      "M4g/rzxEjEDqusbKR": false,
+      "M5Wr42GBylD274sgD": false,
+      "MH4FFqSxUVid8MSHx": false,
+      "MitydmClKjpTUmzPr": false,
+      "MszDercQQBi5MYKja": false
+    },
+    "JointMinVelocity": {},
+    "JointMaxVelocity": {},
+    "JointMaxTorque": {},
+    "RestPositionSelected": "",
+    "FixedInstanceFastenToGround": {},
+    "ReferencePointEnabled": {}
+  },
+  "BTAssemblyDefinitionInfo": {
+    "RootAssembly": {
+      "Occurrences": [
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007388350219948763,
+            -0.00033872004988621314,
+            -0.9999726484008269,
+            -0.009069105502457521,
+            -0.18279448498393439,
+            -0.9831506196008853,
+            -0.001017564678443062,
+            0.04303257794374848,
+            -0.9831233841896512,
+            0.1827970033866666,
+            -0.007325777253649159,
+            0.1710555893517217,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "M5h2pOkgVaejo+GDh"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007419571326640955,
+            5.2874624379118076e-15,
+            -0.9999724746018124,
+            -0.00913082726946118,
+            1.5762319054120165e-16,
+            -1,
+            -5.190563978136945e-15,
+            0.038338296092275,
+            -0.9999724746018408,
+            -8.942945163361555e-17,
+            -0.007419571326642114,
+            0.20436496698149556,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MBK47NygQU+fnvKKJ"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007388350219923593,
+            -0.0003387200498562756,
+            -0.9999726484008444,
+            -0.00906987730017963,
+            -0.18279448498380224,
+            -0.983150619600921,
+            -0.0010175646784472197,
+            0.038513828262376114,
+            -0.9831233841896958,
+            0.1827970033865476,
+            -0.007325777253649624,
+            0.1714721053201459,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MTn8HoecFwNHGSxBF"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007388350219950216,
+            -0.00033872004988584777,
+            -0.9999726484008413,
+            -0.009069105502458952,
+            -0.18279448498393625,
+            -0.9831506196008916,
+            -0.001017564678447877,
+            0.043032577943749956,
+            -0.9831233841896655,
+            0.18279700338667618,
+            -0.0073257772536492105,
+            0.1710555893517229,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MYp/ZmExAGS9OwbEd"
+          ]
+        },
+        {
+          "Fixed": true,
+          "Hidden": false,
+          "Transform": [
+            -3.19483556536792e-16,
+            5.286431207955007e-15,
+            -0.9999999999999716,
+            -0.008999999999999293,
+            8.943327740673789e-17,
+            -1,
+            -5.286431207954844e-15,
+            0.038338296092275,
+            -1,
+            -8.943327740749307e-17,
+            3.1948355653700053e-16,
+            0.20509999999999998,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MfG1xwFWmgbtmCyEF"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007419571326643248,
+            5.692038503201377e-15,
+            -0.9999724746018405,
+            -0.009124627645724194,
+            -3.234912539022636e-14,
+            -0.9999999999999996,
+            -5.9322184330630265e-15,
+            0.04147957661339049,
+            -0.9999724746018405,
+            3.2392249485458836e-14,
+            -0.007419571326642915,
+            0.20101921687856444,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MmTeSqYZZIFXV2OsA"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007419571326643273,
+            1.0586515299189253e-14,
+            -0.9999724746018576,
+            -0.009124627645726673,
+            -4.073082330881921e-14,
+            -1.0000000000000384,
+            -1.0704402983973326e-14,
+            0.04147957661339451,
+            -0.9999724746018677,
+            4.08587455835588e-14,
+            -0.007419571326642822,
+            0.20101921687856417,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MqOgoznVVVm5Fuab8"
+          ]
+        },
+        {
+          "Fixed": false,
+          "Hidden": false,
+          "Transform": [
+            0.007388350219955186,
+            -0.0003387200498850412,
+            -0.9999726484008227,
+            -0.009069105502457304,
+            -0.18279448498394926,
+            -0.9831506196008717,
+            -0.001017564678443255,
+            0.043032577943750025,
+            -0.9831233841896347,
+            0.1827970033866799,
+            -0.007325777253649657,
+            0.17105558935172016,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Path": [
+            "MudPDoCUz0k/u1fjV"
+          ]
+        }
+      ],
+      "Patterns": [],
+      "Features": [
+        {
+          "Id": "MWF43qCtwcSwtZPvL",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Main Hub RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MfG1xwFWmgbtmCyEF"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.01799999999999954,
+                    0.13244999999999846,
+                    -0.09899999999999887
+                  ],
+                  "XAxis": [
+                    1,
+                    1.3898781117660612e-16,
+                    5.858516510294094e-48
+                  ],
+                  "YAxis": [
+                    0,
+                    4.2151297014454864e-32,
+                    -1
+                  ],
+                  "ZAxis": [
+                    -1.3898781117660612e-16,
+                    1,
+                    4.2151297014454864e-32
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MBK47NygQU+fnvKKJ"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.01799999999999954,
+                    0.13244999999999846,
+                    -0.09899999999999887
+                  ],
+                  "XAxis": [
+                    1,
+                    1.3898781117660612e-16,
+                    5.858516510294094e-48
+                  ],
+                  "YAxis": [
+                    0,
+                    4.2151297014454864e-32,
+                    -1
+                  ],
+                  "ZAxis": [
+                    -1.3898781117660612e-16,
+                    1,
+                    4.2151297014454864e-32
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": 0.87266463,
+              "LimitAxialZMin": -0.7853982,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "Mj8z1U07QjKsN/b8o",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Hub Tibula RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "M5h2pOkgVaejo+GDh"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.0427553685401774,
+                    0.1783382960922744,
+                    -0.1142668697129246
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244732845e-21,
+                    0.0055666280773691585
+                  ],
+                  "YAxis": [
+                    0,
+                    1,
+                    7.737054397406017e-19
+                  ],
+                  "ZAxis": [
+                    -0.0055666280773691585,
+                    -7.736934521078206e-19,
+                    0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MBK47NygQU+fnvKKJ"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.04275536854017798,
+                    0.17833829609227686,
+                    -0.1142668697129246
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244732845e-21,
+                    0.0055666280773691585
+                  ],
+                  "YAxis": [
+                    0,
+                    1,
+                    7.737054397406017e-19
+                  ],
+                  "ZAxis": [
+                    -0.0055666280773691585,
+                    -7.736934521078206e-19,
+                    0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": 0.6981317,
+              "LimitAxialZMin": -0.7330383,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "M5Wr42GBylD274sgD",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Femure Tibula RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MudPDoCUz0k/u1fjV"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.09941775763616438,
+                    0.09594392398250556,
+                    -0.11325143553392392
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244732845e-21,
+                    0.0055666280773691585
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -7.737054397406017e-19
+                  ],
+                  "ZAxis": [
+                    0.0055666280773691585,
+                    7.736934521078206e-19,
+                    -0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "M5h2pOkgVaejo+GDh"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.09942165427581748,
+                    0.09594392398250426,
+                    -0.1139514246882681
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244732845e-21,
+                    0.0055666280773691585
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -7.737054397406017e-19
+                  ],
+                  "ZAxis": [
+                    0.0055666280773691585,
+                    7.736934521078206e-19,
+                    -0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": null,
+              "LimitAxialZMin": null,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "MDg4yzrzmMKgaKG7L",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Hub Servo Link RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MBK47NygQU+fnvKKJ"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.018007918406380816,
+                    0.17833829609227536,
+                    -0.10940455422796666
+                  ],
+                  "XAxis": [
+                    0.9999845062058954,
+                    -4.30693042447415e-21,
+                    0.005566628077369717
+                  ],
+                  "YAxis": [
+                    0,
+                    -1.0000000000000002,
+                    -7.737054397406796e-19
+                  ],
+                  "ZAxis": [
+                    0.005566628077369717,
+                    7.736934521078984e-19,
+                    -0.9999845062058954
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MTn8HoecFwNHGSxBF"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.01800791840638098,
+                    0.1783382960922773,
+                    -0.10940455422796666
+                  ],
+                  "XAxis": [
+                    0.9999845062058954,
+                    -4.30693042447415e-21,
+                    0.005566628077369717
+                  ],
+                  "YAxis": [
+                    0,
+                    -1.0000000000000002,
+                    -7.737054397406796e-19
+                  ],
+                  "ZAxis": [
+                    0.005566628077369717,
+                    7.736934521078984e-19,
+                    -0.9999845062058954
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": 0.7853982,
+              "LimitAxialZMin": -0.7853982,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "M0vdxvTALZGcsulyT",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Hub Link RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MBK47NygQU+fnvKKJ"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.04272753539979078,
+                    0.128338296092277,
+                    -0.10926694718189407
+                  ],
+                  "XAxis": [
+                    0.9999845062058954,
+                    -4.30693042447415e-21,
+                    0.005566628077369717
+                  ],
+                  "YAxis": [
+                    0,
+                    -1.0000000000000002,
+                    -7.737054397406796e-19
+                  ],
+                  "ZAxis": [
+                    0.005566628077369717,
+                    7.736934521078984e-19,
+                    -0.9999845062058954
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MmTeSqYZZIFXV2OsA"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.042727535399790795,
+                    0.12833829609227698,
+                    -0.10926694718189413
+                  ],
+                  "XAxis": [
+                    0.9999845062058954,
+                    -4.30693042447415e-21,
+                    0.005566628077369717
+                  ],
+                  "YAxis": [
+                    0,
+                    -1.0000000000000002,
+                    -7.737054397406796e-19
+                  ],
+                  "ZAxis": [
+                    0.005566628077369717,
+                    7.736934521078984e-19,
+                    -0.9999845062058954
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": null,
+              "LimitAxialZMin": null,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "MitydmClKjpTUmzPr",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Servo Link Tri Link RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MTn8HoecFwNHGSxBF"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    -0.0006760058236411205,
+                    0.1617600436830348,
+                    -0.11460864131623594
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.943365216205867e-17,
+                    0.005566628077369854
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -5.287519078509305e-15
+                  ],
+                  "ZAxis": [
+                    0.005566628077369854,
+                    5.2874371547773774e-15,
+                    -0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MqOgoznVVVm5Fuab8"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    -0.0006760058236410782,
+                    0.1617600436830343,
+                    -0.11460864131623594
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.943365216205867e-17,
+                    0.005566628077369854
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -5.287519078509305e-15
+                  ],
+                  "ZAxis": [
+                    0.005566628077369854,
+                    5.2874371547773774e-15,
+                    -0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": null,
+              "LimitAxialZMin": null,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "M4g/rzxEjEDqusbKR",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Link Tri Link",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MmTeSqYZZIFXV2OsA"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.024043611169769122,
+                    0.11176004368303483,
+                    -0.11447103427016363
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244741505e-21,
+                    0.005566628077369717
+                  ],
+                  "YAxis": [
+                    0,
+                    1,
+                    7.737054397406796e-19
+                  ],
+                  "ZAxis": [
+                    -0.005566628077369717,
+                    -7.736934521078985e-19,
+                    0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MqOgoznVVVm5Fuab8"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.02404361116976912,
+                    0.11176004368303483,
+                    -0.1144710342701636
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.630955282618999e-17,
+                    0.005566628077369441
+                  ],
+                  "YAxis": [
+                    0,
+                    1,
+                    4.726299738462642e-15
+                  ],
+                  "ZAxis": [
+                    -0.005566628077369441,
+                    -4.726226510147617e-15,
+                    0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": null,
+              "LimitAxialZMin": null,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "MszDercQQBi5MYKja",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Tri Link Long Link RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MqOgoznVVVm5Fuab8"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.024066434344885916,
+                    0.16176004368303454,
+                    -0.11857097074560738
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.630955282618999e-17,
+                    0.005566628077369441
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -4.726299738462642e-15
+                  ],
+                  "ZAxis": [
+                    0.005566628077369441,
+                    4.726226510147617e-15,
+                    -0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MYp/ZmExAGS9OwbEd"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.024066434344885927,
+                    0.1617600436830346,
+                    -0.11857097074560738
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.630955282618999e-17,
+                    0.005566628077369441
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -4.726299738462642e-15
+                  ],
+                  "ZAxis": [
+                    0.005566628077369441,
+                    4.726226510147617e-15,
+                    -0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": null,
+              "LimitAxialZMin": null,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        },
+        {
+          "Id": "MH4FFqSxUVid8MSHx",
+          "Suppressed": false,
+          "FeatureType": "mate",
+          "FeatureData": {
+            "Name": "Long Link Tibula RF",
+            "MateType": "REVOLUTE",
+            "MateConnectorCS": null,
+            "Occurrence": null,
+            "Occurrences": null,
+            "MatedEntities": [
+              {
+                "MatedOccurrence": [
+                  "MudPDoCUz0k/u1fjV"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.08070544360294579,
+                    0.07936567157326456,
+                    -0.113355601640542
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -4.3069304244732845e-21,
+                    0.0055666280773691585
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -7.737054397406017e-19
+                  ],
+                  "ZAxis": [
+                    0.0055666280773691585,
+                    7.736934521078206e-19,
+                    -0.9999845062058953
+                  ]
+                }
+              },
+              {
+                "MatedOccurrence": [
+                  "MYp/ZmExAGS9OwbEd"
+                ],
+                "MatedCS": {
+                  "Origin": [
+                    0.0807054436029457,
+                    0.07936567157326449,
+                    -0.113355601640542
+                  ],
+                  "XAxis": [
+                    0.9999845062058953,
+                    -2.630955282618999e-17,
+                    0.005566628077369441
+                  ],
+                  "YAxis": [
+                    0,
+                    -1,
+                    -4.726299738462642e-15
+                  ],
+                  "ZAxis": [
+                    0.005566628077369441,
+                    4.726226510147617e-15,
+                    -0.9999845062058953
+                  ]
+                }
+              }
+            ],
+            "MateLimits": {
+              "LimitAxialZMax": 1.0471976,
+              "LimitAxialZMin": -1.0471976,
+              "LimitZMax": null,
+              "LimitZMin": null
+            }
+          }
+        }
+      ],
+      "Instances": [
+        {
+          "Type": "Part",
+          "Id": "M5h2pOkgVaejo+GDh",
+          "IsStandardContent": false,
+          "Name": "Femur \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "J1D",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MBK47NygQU+fnvKKJ",
+          "IsStandardContent": false,
+          "Name": "Hub \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "JdD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MmTeSqYZZIFXV2OsA",
+          "IsStandardContent": false,
+          "Name": "Link \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "RVBD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MYp/ZmExAGS9OwbEd",
+          "IsStandardContent": false,
+          "Name": "Long Link \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "RgBD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MfG1xwFWmgbtmCyEF",
+          "IsStandardContent": false,
+          "Name": "Main \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "JQD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MTn8HoecFwNHGSxBF",
+          "IsStandardContent": false,
+          "Name": "Servo link \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "ROBD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MudPDoCUz0k/u1fjV",
+          "IsStandardContent": false,
+          "Name": "Tibula \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "REBD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        },
+        {
+          "Type": "Part",
+          "Id": "MqOgoznVVVm5Fuab8",
+          "IsStandardContent": false,
+          "Name": "Tri Link \u003c1\u003e",
+          "Suppressed": false,
+          "PartId": "RSBD",
+          "FullConfiguration": "default",
+          "Configuration": "default",
+          "DocumentId": "7b80ed64f807d1359b83317e",
+          "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+          "DocumentVersion": "",
+          "ElementId": "8c1b7d9a6cfa788e532f602b"
+        }
+      ],
+      "FullConfiguration": "default",
+      "Configuration": "default",
+      "DocumentId": "7b80ed64f807d1359b83317e",
+      "ElementId": "21462cb4d15da3f1ff18442c",
+      "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+      "DocumentVersion": ""
+    },
+    "SubAssemblies": [],
+    "Parts": [
+      {
+        "IsStandardContent": false,
+        "PartId": "RVBD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "RgBD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "REBD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "RSBD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "ROBD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "JdD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "J1D",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      },
+      {
+        "IsStandardContent": false,
+        "PartId": "JQD",
+        "BodyType": "solid",
+        "FullConfiguration": "default",
+        "Configuration": "default",
+        "DocumentId": "7b80ed64f807d1359b83317e",
+        "DocumentMicroversion": "fd782f668f8b6cff0e0822aa",
+        "DocumentVersion": "",
+        "ElementId": "8c1b7d9a6cfa788e532f602b",
+        "MateConnectors": null
+      }
+    ],
+    "PartStudioFeatures": []
+  },
+  "BTAssemblyFeatureListResponse1174": {
+    "SourceMicroversion": "fd782f668f8b6cff0e0822aa",
+    "FeatureStates": {
+      "M0vdxvTALZGcsulyT": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "M4g/rzxEjEDqusbKR": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "M5Wr42GBylD274sgD": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "MDg4yzrzmMKgaKG7L": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "MH4FFqSxUVid8MSHx": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "MWF43qCtwcSwtZPvL": {
+        "FeatureStatus": "OK",
+        "Inactive": false
+      },
+      "MitydmClKjpTUmzPr": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "Mj8z1U07QjKsN/b8o": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      },
+      "MszDercQQBi5MYKja": {
+        "FeatureStatus": "ERROR",
+        "Inactive": false
+      }
+    },
+    "Features": [
+      {
+        "FeatureType": "mate",
+        "Name": "Main Hub RF",
+        "FeatureId": "MWF43qCtwcSwtZPvL",
+        "Parameters": [
+          {
+            "NodeId": "YcWlZ0+Gs1ZWU4Ky",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "6XLhrUvnGIMxZi+A",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Vq7JE5mMeuoi12YJ",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "OzurZb6Vhb3Tv9+X",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NBjIfG47Ufgoli5+",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "N2D4/VOrIKJ2DsM3",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "9t4JtWk8hTs4XE6j",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "CgLAaL97Myb5E9I3",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "2Cf5TYM4z3kaOcjn",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "JV+U2k2bROEvt54R",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "61j9OXblapKnid/X",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "O2jLkUzYd433JPDI",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "9uiu5jFL3+N+0AfZ",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "p5KAW4SLQ4wsBtxO",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "iBUcP/iE/096b8W6",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "FmW0RGwriHKaMAUG",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "8dq6pRwDZEthjBry",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "dQ6StPmKXE0swBXc",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "CC8CPdUpuvdpLZXA",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "wPediCsgESMfAxPj",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-45 deg"
+          },
+          {
+            "NodeId": "o7lW1mQ1+qiZqtHB",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "50 deg"
+          },
+          {
+            "NodeId": "9tut4B6ANB+TYOu0",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Er10P9MIE2JbDm9g",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "HsNPzMHofutdmXNK",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "EzQHXV5kHndsggSl",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s+Aj333Y7iYJa298",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Hub Tibula RF",
+        "FeatureId": "Mj8z1U07QjKsN/b8o",
+        "Parameters": [
+          {
+            "NodeId": "Ejl5/floRgYc/Z53",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "OM1VRo+elN+DKkTj",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "B1c3XkNU+tBinjgq",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "diTQ8u6mYRsqT1VS",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "bMdx5fxoreirzF60",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "YLlVtxIw2sFhIwfv",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "CUUZhY7c4PcQOxCf",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "AxGJ2L661WILzRaC",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "NJ5jQ7O7r5wsAYr9",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "bBjwxtRNWIfG8U72",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "btOe7ARDQxyPWOd1",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "I9e2zh2rvm/r3tgM",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "lXP8lJAN0vbfV5pX",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RG2VRLl9JfN50qkE",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ZBoGPC6bBcSyIlUi",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "kqrvxIav3veU9Cc9",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "w4vJKhs2wF4u6Fb5",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "gdnyaYOicULtBK6D",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "nRhyKcgmd6iNHIxB",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Wz7Z6PiH+rxkAEXC",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-42 deg"
+          },
+          {
+            "NodeId": "dsl+1Jv5uuiYA6cv",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "40 deg"
+          },
+          {
+            "NodeId": "Y5K9WoQtuxfRAY+i",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "JGrYN1w1zEGBIfgi",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Kb8ZScKdbN0O9d44",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "QyRIFUNkCOiCyB0E",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "gZemJ5tRQasxfcUw",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Femure Tibula RF",
+        "FeatureId": "M5Wr42GBylD274sgD",
+        "Parameters": [
+          {
+            "NodeId": "cVrlb3zYtq9sn5KG",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "giH5VlNv4UPDCt49",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "SSKr0A1ZpQZY1YxJ",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "0Fak1J1KIAvH6/WI",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "iH0XeDZpkW9DgNYN",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "mqzZP/7MnwgyN7QT",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uofrytk6cvzY5A2Y",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "DqekLAOgfc76mOwn",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "oovFl9EQofI1QHFb",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s0xZ6A3BhuvJ+gJL",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GzeN3m/gftz0jdge",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+1Ao/vXlygHNVFjc",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uZ8cuNA/1Mw2ejM/",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+BY2k+F7CT+ZQCT4",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GqDJMfl5s7kiZxOO",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "I8VPCFPcPk8eHaLE",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "kTzRVemv7yIfVlPa",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "fSJQvV8j67ASUyis",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "p3QZhrZ1d2TVOmfk",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "F8oDjGl3nfvltCg2",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "UKSDJdJSkHdsudKx",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GOTs8CjSfftj/sMT",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "cXnoZqLVn/nFhIY7",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "TO5H3y8dCjrQ7DOD",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "5fY3hBcm5Cz6Lp7J",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "xO4ScAUspwxPU7wz",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Hub Servo Link RF",
+        "FeatureId": "MDg4yzrzmMKgaKG7L",
+        "Parameters": [
+          {
+            "NodeId": "WG3QN9ZUGlHu4mRr",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "q8VtRXCit/0Iei1E",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "i969X74FPvL91FLY",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "IKBlw5s+C0doTrAB",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RYPq0zPXA35xRiXk",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "pcZ4TTB32TWciX5l",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "xWi8Y7NqkTIKC/kB",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "0F8hgFQ7WXUQkFIy",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WIBMXTA2hk9ODu8q",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "KVOibeEpVLQKqEfN",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "WXWDWC20oo1W3hGO",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Cj8gfDqylcpqCTr7",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "8Y/2UhR28SVvX0n4",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "vGSb+j/9ErZ4TZdP",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "F+P2qOGSHgnVDs3F",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Y92MLoqlTqaGWtMR",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ShJb3c2Mk4TYroBW",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "KpOpgrIUWhk0Foh8",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "A+qBV3nlVKL5Rw36",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "9Bh/0ZF8+gVhAVqI",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "(-pi/4) rad"
+          },
+          {
+            "NodeId": "McvCfu0Qrjh31r1b",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "(pi/4) rad"
+          },
+          {
+            "NodeId": "itL+UgvyZo7s8CLA",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GKzUOqeYab7Gd0yH",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "r/kOrRSPgIV8Hn4A",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "WDWVY09aC3UpLW3y",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Nanm6ltjVsGXJwCn",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Hub Link RF",
+        "FeatureId": "M0vdxvTALZGcsulyT",
+        "Parameters": [
+          {
+            "NodeId": "sKegfrgz/5atZYR/",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "SL9RaRKixKerCwug",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "KR1tm3YleUsEPem+",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "k2UTx+VEuRvbSoTG",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "eR1SN7lPvJpgcyJ9",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "B3RzPP9tcjQRF0DO",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ge+B9kv6iwtG5WVF",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "bDZhKnYvt6zggG9f",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "RGZz5nWgjPFIlUgt",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "FJzJIGfWcdMlJeJv",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "mFLH1jS5Jjok9Y34",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "JvxW6Qu3ZGqA6FzB",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "oW+a5uOj9xftgLZQ",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "OWIwcpISOyOQ5rrf",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "XEKRUnQfMp77zMwP",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "lUt6Qdr0v3yM6gNJ",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "78Z3L2GNolVOJfdf",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "HQsVclelXJP+K+ba",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "pYqa2llC6AtN4hu4",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WPGP4wAqAjPiKq3k",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "SWBqoOy/9N8aso/k",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "+ZuF5ZDluZNxXUES",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "aOQ+mbR2fzCEPlav",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "ED91fgTLRLCSiKhu",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "44o1zGuB86hNBCX1",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "G+khEGV5m0osBZge",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Servo Link Tri Link RF",
+        "FeatureId": "MitydmClKjpTUmzPr",
+        "Parameters": [
+          {
+            "NodeId": "hI0CDy9X++SlmQ1S",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "HNRMz6RUN0EAxJeC",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "GDDkSz/5vOG4wApR",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "0EK/KBW+aKW14W42",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "90eP/imTY1eJMCzI",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "RR5EtnGf4B8Cmv6E",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "79uQXDdS6QhInmyC",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "zPJrFfl+RYCKCTkH",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Az0Yt6z3goWzE97D",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "AZB2ZyehgxJRqsg/",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "a4bnX7Lv2yjzKqzI",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "hLg2FiU11jo9nuLd",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "IOSjooyit+fgjmvy",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "fHRjyML7n8ZZg7ky",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ZEuGliyIazCNT4/T",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "EcXFQunKtCVFgXlc",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "JzvjKZe0KzqCm0B7",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Xxg36eEtMPPaUbxZ",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "pEMo9WPy3ifeRVky",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "UvCw5RnDQQx/J1kj",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "XQYswv2FuZUXPM7s",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "4+1rl4DSKnJVL9LR",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "/+AKeuFo17V7NOeK",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "kGblomILbiGWmc1n",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "GmnTrXT9fw+kqC+Q",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Ve2qVG2PmAn/gxYl",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Link Tri Link",
+        "FeatureId": "M4g/rzxEjEDqusbKR",
+        "Parameters": [
+          {
+            "NodeId": "FKBb3ERzmrenP4zL",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "MDqUludyY7tOXVMm",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "nXYY59ILY8+YN8qh",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "XgzvdZHdQQWe9Ut9",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "tc875uGh7sgR1HRx",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "zlUxsVjFL8G03XDe",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "TD6yGf2l2ZLBoidr",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "QBkgaAH42JX3QeOp",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "s876MLrpy0eXCi54",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "bpbdZQH/MmaEdAcD",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "kpBuo195SgPbWGtF",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "FKyNaHMAyjweYOWU",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "ixp4b2QpNeswCxBD",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "zYI2BlUQm/fn0cJK",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "qJAaxTMNfQnTGp8M",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "qRmYwyhhc2Go2CKs",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ltQgWxaPLPltHO/U",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "YD8NcrNqOGL6Rw8u",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "mUbDQaSzAM3nMCVG",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "sm6R7YqbDbOdGreu",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "8al2bQu0jOdTf6az",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "bloj4w3H8E50Owgy",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "M1DKQS/b1DbPbYzd",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "uHLy9j5rYPQUxIPE",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "oDLLK8CquzUu8pZZ",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "LGLXWhtj3QI2s/cb",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Tri Link Long Link RF",
+        "FeatureId": "MszDercQQBi5MYKja",
+        "Parameters": [
+          {
+            "NodeId": "GGJWmrf8HF/IMr/f",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "17jJYaU5m1NPeeYZ",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "ja9hDqK7dWhHkWDw",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "29OJ7C0rqlM0n7G5",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "J/tkbrS2niTVgc7t",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "HlfvQJGWzV7EjYmU",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "gLTxox7b4YJtzix4",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "Ot1cKxcgcy3F4OH4",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "Y0+z2/+VbkRxEFjj",
+            "ParameterId": "limitsEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "dj/p1wdvJjEeIZ/d",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "3P39kzybUocQMVCA",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "osFi8xM0TT+kjzP6",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "+q0p/1QV8JdXooeY",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "gGxSL6/LJB+LjW3W",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "UBufC4PxzPw4P9LR",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "0efH7ct9fex/XW1m",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "uXRmbR62UFAFkq8D",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "2tchvGzmtz/YlaYV",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "9WpqPkM2KxG6/ieo",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "GjyCNAfuX2gNPdkN",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "oVl2YlhbHFkYBoWA",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "WxIMSKSX1NM9ZDeU",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "goETr4Vzpxg+bDU9",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "5xA2/nuw1N2ziJKw",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Nrdfbx91xgKZ9aZy",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "G90uWuowlkXcUpZW",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      },
+      {
+        "FeatureType": "mate",
+        "Name": "Long Link Tibula RF",
+        "FeatureId": "MH4FFqSxUVid8MSHx",
+        "Parameters": [
+          {
+            "NodeId": "YL5nEFSJkNwelMv1",
+            "ParameterId": "mateType",
+            "Value": "REVOLUTE",
+            "Expression": ""
+          },
+          {
+            "NodeId": "9SwM5n9QojboYufi",
+            "ParameterId": "mateConnectorsQuery",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "PqUNOlKmUW7uSCsR",
+            "ParameterId": "mateOffsetEnabled",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "4m7evbdXXLu+3Hxu",
+            "ParameterId": "mateOffsetDistanceX",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "oRIbV8LkSwUC5AQK",
+            "ParameterId": "mateOffsetDistanceY",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NDxcvGCa5pikn3/M",
+            "ParameterId": "mateOffsetDistanceZ",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "GJCakL/4ZB4Lg6pq",
+            "ParameterId": "rotationType",
+            "Value": "ABOUT_X",
+            "Expression": ""
+          },
+          {
+            "NodeId": "UcqI91OpsKCO8nXC",
+            "ParameterId": "rotation",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "b5Wm1+Y4PyddOHLZ",
+            "ParameterId": "limitsEnabled",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "Diy7FM+TVYgQLoIX",
+            "ParameterId": "limitXMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "1/sRtG5fkAqIo5AE",
+            "ParameterId": "limitXMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "4KcV+ugfyy+eDQfZ",
+            "ParameterId": "limitYMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "uyrpG/Y9RqDQIK7M",
+            "ParameterId": "limitYMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "Up/U0XU7leQGfBNJ",
+            "ParameterId": "limitZMin",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "NXKJJwnAl2zwzY23",
+            "ParameterId": "limitZMax",
+            "Value": 0,
+            "Expression": "0 mm"
+          },
+          {
+            "NodeId": "tLgl3A1FY7iAJCEa",
+            "ParameterId": "limitAxialXMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "ug/IK5u5O09aqs1y",
+            "ParameterId": "limitAxialXMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "7uXBGj7tXME6QTDw",
+            "ParameterId": "limitAxialYMin",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "TjzdPw3ACZBdo6bK",
+            "ParameterId": "limitAxialYMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "0H/BrDVNj9+kEyjE",
+            "ParameterId": "limitAxialZMin",
+            "Value": 0,
+            "Expression": "-60 deg"
+          },
+          {
+            "NodeId": "EXCcIFqPlrgH3Wn4",
+            "ParameterId": "limitAxialZMax",
+            "Value": 0,
+            "Expression": "60 deg"
+          },
+          {
+            "NodeId": "Do3gUixYp08GpHR8",
+            "ParameterId": "limitEulerConeAngleMax",
+            "Value": 0,
+            "Expression": "0 rad"
+          },
+          {
+            "NodeId": "uzOmYj6uA/kmcjHE",
+            "ParameterId": "functionalconnection",
+            "Value": false,
+            "Expression": ""
+          },
+          {
+            "NodeId": "OBN6ov+KMLHckeTc",
+            "ParameterId": "facestoconnect",
+            "Value": null,
+            "Expression": ""
+          },
+          {
+            "NodeId": "2oRdLrS6iw531bCC",
+            "ParameterId": "primaryAxisAlignment",
+            "Value": true,
+            "Expression": ""
+          },
+          {
+            "NodeId": "s8X4aPVbWWIUGGyw",
+            "ParameterId": "secondaryAxisAlignment",
+            "Value": "PLUS_X",
+            "Expression": ""
+          }
+        ]
+      }
+    ]
+  },
+  "BTDocumentElementInfo": {
+    "Id": "21462cb4d15da3f1ff18442c",
+    "ElementType": "ASSEMBLY",
+    "PrettyType": "",
+    "Type": "Assembly",
+    "DataType": "onshape/assembly",
+    "Name": "Isaac lab Assembly",
+    "Filename": "",
+    "MicroversionId": "b02960d0822924ec74ab9344",
+    "ForeignDataId": "",
+    "ThumbnailInfo": null
+  },
+  "NamedPositions": []
+}

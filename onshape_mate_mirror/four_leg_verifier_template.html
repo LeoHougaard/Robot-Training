@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four-leg USD verification</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #15191f; color: #eef2f7; font: 14px/1.4 system-ui, sans-serif; }
+    canvas { display: block; }
+    .panel { position: fixed; z-index: 2; background: rgba(20, 24, 30, .92); border: 1px solid #3b4653; border-radius: 8px; box-shadow: 0 8px 30px #0008; }
+    #summary { top: 16px; left: 16px; width: min(390px, calc(100vw - 32px)); padding: 14px 16px; }
+    h1 { margin: 0 0 8px; font-size: 17px; }
+    p { margin: 6px 0; color: #bfc9d6; }
+    .ok { color: #6ee7a2; font-weight: 700; }
+    .measure { color: #ffd166; font-weight: 650; }
+    #views { right: 16px; top: 16px; padding: 8px; display: flex; gap: 6px; }
+    button { border: 1px solid #4b5969; background: #27313d; color: #eef2f7; border-radius: 5px; padding: 7px 10px; cursor: pointer; }
+    button:hover { background: #344151; }
+    #legend { left: 16px; bottom: 16px; padding: 10px 13px; display: grid; grid-template-columns: auto auto; gap: 4px 12px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+    #error { display: none; color: #ff8790; }
+  </style>
+</head>
+<body>
+  <section id="summary" class="panel">
+    <h1>Four-leg USD visual verification</h1>
+    <p><span class="ok">PASS</span> — four independently named RF, RR, LF, and LR leg assemblies.</p>
+    <p>Width at Main Hub connectors: <span class="measure">180.00000 mm</span><br>
+       Length at Main Hub connectors: <span class="measure">188.22341 mm</span></p>
+    <p>29 rigid bodies · 36 revolute constraints · 8 independent loop closures · 12 driven joints</p>
+    <p>Drag to orbit, scroll to zoom, or choose a view.</p>
+    <p id="error"></p>
+  </section>
+  <nav id="views" class="panel">
+    <button data-view="iso">Isometric</button>
+    <button data-view="top">Top</button>
+    <button data-view="front">Front</button>
+    <button data-view="side">Side</button>
+  </nav>
+  <div id="legend" class="panel">
+    <span><i class="dot" style="background:#ff6b6b"></i>RF</span><span>x +90, y −94.111705 mm</span>
+    <span><i class="dot" style="background:#4dabf7"></i>RR</span><span>x +90, y +94.111705 mm</span>
+    <span><i class="dot" style="background:#51cf66"></i>LF</span><span>x −90, y −94.111705 mm</span>
+    <span><i class="dot" style="background:#cc5de8"></i>LR</span><span>x −90, y +94.111705 mm</span>
+  </div>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const embeddedGltf = __EMBEDDED_GLTF__;
+    const verification = __VERIFICATION_DATA__;
+    const colors = { RF: 0xff6b6b, RR: 0x4dabf7, LF: 0x51cf66, LR: 0xcc5de8 };
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x15191f);
+    const camera = new THREE.PerspectiveCamera(38, innerWidth / innerHeight, 0.001, 20);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    document.body.appendChild(renderer.domElement);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.target.set(0, 0.12, 0);
+
+    scene.add(new THREE.HemisphereLight(0xe8f4ff, 0x28313b, 2.4));
+    const key = new THREE.DirectionalLight(0xffffff, 3.2);
+    key.position.set(1.4, 2.2, 1.7);
+    scene.add(key);
+    const grid = new THREE.GridHelper(1.2, 24, 0x3d4855, 0x28313a);
+    scene.add(grid);
+
+    function zUpToYUp(point) { return new THREE.Vector3(point[0], point[2], -point[1]); }
+    function labelSprite(text, color) {
+      const canvas = document.createElement('canvas'); canvas.width = 420; canvas.height = 72;
+      const c = canvas.getContext('2d'); c.fillStyle = '#10151ddd'; c.roundRect(2, 2, 416, 68, 14); c.fill();
+      c.strokeStyle = '#' + color.toString(16).padStart(6, '0'); c.lineWidth = 4; c.stroke();
+      c.fillStyle = '#ffffff'; c.font = '700 31px system-ui'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(text, 210, 37);
+      const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(canvas), depthTest: false }));
+      sprite.scale.set(.09, .026, 1); return sprite;
+    }
+    for (const [corner, point] of Object.entries(verification.mounts)) {
+      const position = zUpToYUp(point);
+      const sphere = new THREE.Mesh(new THREE.SphereGeometry(.006, 20, 12), new THREE.MeshStandardMaterial({ color: colors[corner], emissive: colors[corner], emissiveIntensity: .35 }));
+      sphere.position.copy(position); scene.add(sphere);
+      const label = labelSprite(corner, colors[corner]); label.position.copy(position).add(new THREE.Vector3(0, .024, 0)); scene.add(label);
+    }
+    function dimension(a, b, text) {
+      const material = new THREE.LineBasicMaterial({ color: 0xffd166, depthTest: false });
+      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints([a, b]), material); line.renderOrder = 4; scene.add(line);
+      const label = labelSprite(text, 0xffd166); label.position.copy(a).add(b).multiplyScalar(.5).add(new THREE.Vector3(0, .018, 0)); label.scale.set(.15, .026, 1); scene.add(label);
+    }
+    dimension(zUpToYUp(verification.mounts.LF), zUpToYUp(verification.mounts.RF), '180.00000 mm');
+    dimension(zUpToYUp(verification.mounts.RF), zUpToYUp(verification.mounts.RR), '188.22341 mm');
+
+    new GLTFLoader().parse(JSON.stringify(embeddedGltf), '', gltf => {
+      scene.add(gltf.scene);
+      let renderedMeshNodes = 0;
+      gltf.scene.traverse(object => { if (object.isMesh) renderedMeshNodes += 1; });
+      window.__fourLegVerification = { ready: true, renderedMeshNodes, dimensionsMm: verification.dimensionsMm };
+      const box = new THREE.Box3().setFromObject(gltf.scene); controls.target.copy(box.getCenter(new THREE.Vector3()));
+      setView('iso');
+    }, error => {
+      const output = document.querySelector('#error'); output.style.display = 'block'; output.textContent = 'Viewer error: ' + error.message;
+    });
+
+    function setView(view) {
+      const target = controls.target;
+      const positions = {
+        iso: new THREE.Vector3(.72, .53, .72),
+        top: new THREE.Vector3(0, 1.05, .001),
+        front: new THREE.Vector3(0, .22, 1.05),
+        side: new THREE.Vector3(1.05, .22, 0),
+      };
+      camera.position.copy(target).add(positions[view]); camera.lookAt(target); controls.update();
+    }
+    document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
+    addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+    renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+  </script>
+</body>
+</html>

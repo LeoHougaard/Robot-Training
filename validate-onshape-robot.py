@@ -36,6 +36,8 @@ try:
     print(f"opened_default_prim={stage.GetDefaultPrim().GetPath()}", flush=True)
 
     revolute_joints = []
+    articulation_revolute_joints = []
+    loop_closure_joints = []
     rigid_bodies = []
     collisions = []
     robot_roots = []
@@ -45,6 +47,10 @@ try:
         if prim.IsA(UsdPhysics.RevoluteJoint):
             revolute_joints.append(prim)
             joint = UsdPhysics.Joint(prim)
+            if joint.GetExcludeFromArticulationAttr().Get():
+                loop_closure_joints.append(prim)
+            else:
+                articulation_revolute_joints.append(prim)
             for relation_name, relation in (
                 ("body0", joint.GetBody0Rel()),
                 ("body1", joint.GetBody1Rel()),
@@ -69,10 +75,55 @@ try:
         raise RuntimeError(
             "Broken joint body relationships: " + ", ".join(broken_joint_targets)
         )
-    if len(rigid_bodies) < len(revolute_joints) + 1:
+    if len(rigid_bodies) < len(articulation_revolute_joints) + 1:
         raise RuntimeError(
             f"Found {len(rigid_bodies)} rigid bodies for "
-            f"{len(revolute_joints)} revolute joints."
+            f"{len(articulation_revolute_joints)} articulation revolute joints."
+        )
+
+    # A reduced-coordinate articulation must be a tree. Closed linkages remain
+    # valid when each extra loop-closing joint is explicitly excluded from the
+    # articulation and solved as a maximal-coordinate constraint by PhysX.
+    parents = {}
+
+    def find(body):
+        parents.setdefault(body, body)
+        while parents[body] != body:
+            parents[body] = parents[parents[body]]
+            body = parents[body]
+        return body
+
+    def union(body0, body1):
+        root0, root1 = find(body0), find(body1)
+        if root0 == root1:
+            return False
+        parents[root1] = root0
+        return True
+
+    articulation_cycles = []
+    for prim in articulation_revolute_joints:
+        joint = UsdPhysics.Joint(prim)
+        body0 = str(joint.GetBody0Rel().GetTargets()[0])
+        body1 = str(joint.GetBody1Rel().GetTargets()[0])
+        if not union(body0, body1):
+            articulation_cycles.append(str(prim.GetPath()))
+    if articulation_cycles:
+        raise RuntimeError(
+            "Reduced-coordinate articulation contains cycles: "
+            + ", ".join(articulation_cycles)
+        )
+
+    invalid_closures = []
+    for prim in loop_closure_joints:
+        joint = UsdPhysics.Joint(prim)
+        body0 = str(joint.GetBody0Rel().GetTargets()[0])
+        body1 = str(joint.GetBody1Rel().GetTargets()[0])
+        if find(body0) != find(body1):
+            invalid_closures.append(str(prim.GetPath()))
+    if invalid_closures:
+        raise RuntimeError(
+            "Excluded joints do not close an articulation loop: "
+            + ", ".join(invalid_closures)
         )
     if not collisions:
         raise RuntimeError("No collision-enabled prims were found.")
@@ -105,6 +156,11 @@ try:
     print(f"default_prim={stage.GetDefaultPrim().GetPath()}", flush=True)
     print(f"isaac_robot_roots={len(robot_roots)}", flush=True)
     print(f"revolute_joints={len(revolute_joints)}", flush=True)
+    print(
+        f"articulation_revolute_joints={len(articulation_revolute_joints)}",
+        flush=True,
+    )
+    print(f"loop_closure_joints={len(loop_closure_joints)}", flush=True)
     print(f"rigid_bodies={len(rigid_bodies)}", flush=True)
     print(f"collision_prims={len(collisions)}", flush=True)
     print(f"composed_layers={len(used_layers)}", flush=True)

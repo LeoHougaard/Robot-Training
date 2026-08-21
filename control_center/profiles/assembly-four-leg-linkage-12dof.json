@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "profile_id": "assembly-four-leg-linkage-12dof",
+  "display_name": "Assembly four-leg closed-linkage quadruped (12 actuators)",
+  "robot": {
+    "asset_source": "Workspace USD",
+    "asset_usd": "/workspace/projects/assets/onshape/assembly-four-leg-linkage-12dof-zero/robot.usd",
+    "reference_task": "",
+    "semantic_direction_contract": "four-leg-linkage-mirrored-v1",
+    "expected_joint_count": 12,
+    "ready_for_training": true,
+    "start_position": [0.0, 0.0, 0.16],
+    "start_rotation_deg": [0.0, 90.0, 0.0],
+    "forward_axis": [0.0, -1.0, 0.0],
+    "up_axis": [-1.0, 0.0, 0.0],
+    "contacts": {
+      "base": "_MfG1xwFWmgbtmCyEF",
+      "undesired": "(_M5h2pOkgVaejo_GDh|_MBK47NygQU_fnvKKJ|_MTn8HoecFwNHGSxBF|_MYp_ZmExAGS9OwbEd|_MmTeSqYZZIFXV2OsA|_MqOgoznVVVm5Fuab8)(_RR|_LF|_LR)?",
+      "feet": {
+        "front_right": "_MudPDoCUz0k_u1fjV",
+        "front_left": "_MudPDoCUz0k_u1fjV_LF",
+        "back_right": "_MudPDoCUz0k_u1fjV_RR",
+        "back_left": "_MudPDoCUz0k_u1fjV_LR"
+      }
+    },
+    "joints": [
+      {"name":"_MWF43qCtwcSwtZPvL","semantic":"front_right_hip_abduction","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_Mj8z1U07QjKsN_b8o","semantic":"front_right_hip_flexion","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MDg4yzrzmMKgaKG7L","semantic":"front_right_knee_flexion","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MWF43qCtwcSwtZPvL_LF","semantic":"front_left_hip_abduction","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_Mj8z1U07QjKsN_b8o_LF","semantic":"front_left_hip_flexion","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MDg4yzrzmMKgaKG7L_LF","semantic":"front_left_knee_flexion","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MWF43qCtwcSwtZPvL_RR","semantic":"back_right_hip_abduction","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_Mj8z1U07QjKsN_b8o_RR","semantic":"back_right_hip_flexion","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MDg4yzrzmMKgaKG7L_RR","semantic":"back_right_knee_flexion","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MWF43qCtwcSwtZPvL_LR","semantic":"back_left_hip_abduction","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_Mj8z1U07QjKsN_b8o_LR","semantic":"back_left_hip_flexion","direction":1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001},
+      {"name":"_MDg4yzrzmMKgaKG7L_LR","semantic":"back_left_knee_flexion","direction":-1,"rest_position":0.0,"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001}
+    ]
+  },
+  "training": {"stage":"V2Goal","num_envs":512,"max_iterations":1900,"checkpoint":"/workspace/projects/training/logs/rl_games/quadruped_v2_assembly_four_leg_linkage_12dof/2026-08-19_22-18-49/nn/quadruped_v2_assembly_four_leg_linkage_12dof.pth","seed":42,"record_video":false,"video_interval":5000,"video_length":2300},
+  "environment": {"surface":"Flat","static_friction":1.0,"dynamic_friction":0.9,"restitution":0.0,"physics_hz":200,"control_hz":50,"action_scale":0.30,"action_delta_limit":0.20,"action_filter_alpha":0.20,"action_limit_by_joint":[0.40,1.0,1.0,0.40,1.0,1.0,0.40,1.0,1.0,0.40,1.0,1.0],"stationary_planar_deadband":0.02,"stationary_yaw_deadband":0.03,"stationary_stance_action":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"episode_length_s":12.0,"termination_height":0.10,"env_spacing":1.5},
+  "terrain": {"roughness_min":0.0025,"roughness_max":0.015,"slope_max":0.10,"tile_size":4.0},
+  "physics": {"solver_position_iterations":16,"solver_velocity_iterations":4,"self_collisions":false,"max_depenetration_velocity":0.5,"contact_patch_capacity":524288},
+  "commands": {"forward_min":-0.18,"forward_max":0.30,"lateral_min":-0.16,"lateral_max":0.16,"yaw_max":0.40,"straight_fraction":0.20,"low_speed_straight_fraction":0.0,"high_speed_straight_fraction":0.50,"hold_min_s":2.0,"hold_max_s":4.0,"smoothing_s":0.4,"standing_fraction":0.15,"turn_fraction":0.20,"curve_right_fraction":0.50,"turn_right_fraction":0.50,"turn_yaw_min":0.30,"turn_yaw_max":0.40,"goal_novel_fraction_start":0.25,"goal_novel_fraction_end":0.75,"goal_novel_speed_scale_start":0.15,"goal_curriculum_steps":6400,"goal_familiar_turn_fraction":0.40,"goal_mixed_fraction":0.25},
+  "reset": {"small_tilt_deg":10.0,"large_tilt_deg":20.0,"large_tilt_fraction":0.20,"randomize_yaw":true,"joint_position_noise":0.02,"joint_velocity_noise":0.0},
+  "domain_randomization": {"enabled":false,"base_mass_scale_min":0.9,"base_mass_scale_max":1.1,"link_mass_scale_min":0.95,"link_mass_scale_max":1.05,"actuator_drive_scale_min":0.90,"actuator_drive_scale_max":1.10,"actuator_effort_scale_min":0.90,"actuator_effort_scale_max":1.10,"actuator_velocity_scale_min":0.90,"actuator_velocity_scale_max":1.10,"base_com_x":0.02,"base_com_y":0.02,"base_com_z":0.005,"robot_static_friction_min":0.7,"robot_static_friction_max":1.1,"robot_dynamic_friction_min":0.6,"robot_dynamic_friction_max":1.0,"robot_restitution_min":0.0,"robot_restitution_max":0.0,"material_buckets":32},
+  "actuators": {"stiffness":22.0,"damping":0.8,"effort_limit":1.37,"velocity_limit":5.45,"armature":0.001,"soft_limit_factor":0.90},
+  "disturbance": {"push_probability":0.35,"push_linear_velocity":0.30,"push_yaw_velocity":0.25,"push_interval_min_s":6.0,"push_interval_max_s":10.0},
+  "noise": {"enabled":true,"gyro":0.15,"gravity":0.04,"joint_position":0.01,"joint_velocity":1.00},
+  "rewards": {"locomotion":7.0,"yaw":4.0,"diagonal_gait":0.4,"complete_gait_cycle":10.0,"reference_trot":0.0,"clocked_trot":4.0,"reference_trot_period_s":0.36,"foot_clearance":0.5,"target_foot_clearance_m":0.020,"nominal_foot_com_z_from_base_m":-0.12,"foot_clearance_std":0.015,"air_time_variance_penalty":0.0,"minimum_swing_duty_fraction":0.26,"swing_duty_floor_penalty":-50.0,"diagonal_joint_symmetry":0.0,"diagonal_joint_symmetry_std":0.04,"uncommanded_motion_penalty":0.0,"prolonged_foot_air_penalty":-1.0,"stability_penalty":-0.75,"vertical_motion_penalty":-0.50,"action_rate_penalty":-0.20,"hip_abduction_penalty":0.0,"hip_abduction_tolerance_rad":0.08,"foot_spread_penalty":0.0,"foot_spread_tolerance_m":0.008,"nominal_foot_lateral_m":[0.1100707,-0.0920706,0.1100707,-0.0920706],"foot_slip_penalty":-0.40,"undesired_contact_penalty":-1.0,"fall_penalty":-8.0,"velocity_tracking_std":0.2,"stationary_velocity_std":0.05,"yaw_tracking_std":0.20,"diagonal_gait_std":0.1,"max_foot_air_time_s":0.45,"max_foot_contact_time_s":0.50,"max_gait_cycle_interval_s":3.0},
+  "ppo": {"learning_rate":0.00015,"learning_rate_schedule":"adaptive","horizon_length":32,"minibatch_size":4096,"mini_epochs":5,"gamma":0.99,"gae_lambda":0.95,"entropy_coefficient":0.005,"clip_range":0.2,"kl_threshold":0.01,"grad_norm":1.0,"critic_coefficient":2.0,"activation":"elu","hidden_units":[128,128,128]}
+}

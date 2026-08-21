@@ -48,22 +48,22 @@ asset_dir="$(realpath -m "$(dirname "$asset")")"
   exit 2
 }
 source_asset="$asset_dir/robot.usda"
-source_dir="$asset_dir/meshes"
 output_dir="$asset_dir/usd_meshes"
-[[ -f "$source_asset" && -d "$source_dir" ]] || {
-  printf 'Publisher source asset or mesh directory is missing below %s.\n' "$asset_dir" >&2
+[[ -f "$source_asset" ]] || {
+  printf 'Publisher source asset is missing below %s.\n' "$asset_dir" >&2
   exit 1
 }
 
 mapfile -t referenced_meshes < <(
-  sed -n 's#.*@\./meshes/\([^@]*\.gltf\)@.*#\1#p' "$source_asset" | sort -u
+  sed -n 's#.*@\./\([^@]*\.gltf\)@.*#\1#p' "$source_asset" | sort -u
 )
 (( ${#referenced_meshes[@]} > 0 )) || {
   printf 'Publisher source asset contains no glTF mesh references: %s\n' "$source_asset" >&2
   exit 1
 }
 for mesh in "${referenced_meshes[@]}"; do
-  [[ "$mesh" != */* && -s "$source_dir/$mesh" ]] || {
+  source_mesh="$(realpath -m "$asset_dir/$mesh")"
+  [[ "$source_mesh" == "$asset_dir/"* && "$mesh" != /* && -s "$source_mesh" ]] || {
     printf 'Referenced Publisher mesh is missing or unsafe: %s\n' "$mesh" >&2
     exit 1
   }
@@ -72,7 +72,7 @@ done
 needs_conversion=0
 for mesh in "${referenced_meshes[@]}"; do
   output="$output_dir/${mesh%.gltf}.usd"
-  if [[ ! -s "$output" || "$source_dir/$mesh" -nt "$output" ]]; then
+  if [[ ! -s "$output" || "$asset_dir/$mesh" -nt "$output" ]]; then
     needs_conversion=1
   fi
 done
@@ -82,10 +82,23 @@ if (( needs_conversion )); then
   log="$LOG_ROOT/$(basename "$asset_dir")-gltf-conversion.log"
   printf 'Converting %d Publisher glTF meshes for %s.\n' \
     "${#referenced_meshes[@]}" "$(basename "$asset_dir")"
-  /workspace/isaaclab/isaaclab.sh -p "$CONVERTER" \
-    --input-dir "$source_dir" \
-    --output-dir "$output_dir" \
-    --viz=none 2>&1 | tee "$log"
+  : >"$log"
+  declare -A seen_source_dirs=()
+  source_dirs=()
+  for mesh in "${referenced_meshes[@]}"; do
+    source_rel="$(dirname -- "$mesh")"
+    if [[ -z "${seen_source_dirs[$source_rel]+present}" ]]; then
+      seen_source_dirs[$source_rel]=1
+      source_dirs+=("$source_rel")
+    fi
+  done
+  for source_rel in "${source_dirs[@]}"; do
+    mkdir -p "$output_dir/$source_rel"
+    /workspace/isaaclab/isaaclab.sh -p "$CONVERTER" \
+      --input-dir "$asset_dir/$source_rel" \
+      --output-dir "$output_dir/$source_rel" \
+      --viz=none 2>&1 | tee -a "$log"
+  done
 fi
 
 for mesh in "${referenced_meshes[@]}"; do
@@ -97,12 +110,12 @@ done
 
 temporary="$asset_dir/.robot.usd.$$"
 trap 'rm -f -- "$temporary"' EXIT
-sed 's#@\./meshes/\([^@]*\)\.gltf@#@./usd_meshes/\1.usd@#g' \
+sed 's#@\./\([^@]*\)\.gltf@#@./usd_meshes/\1.usd@#g' \
   "$source_asset" >"$temporary"
 sed -i \
   's/prepend apiSchemas = \["IsaacRobotAPI"\]/prepend apiSchemas = ["IsaacRobotAPI", "PhysicsArticulationRootAPI"]/' \
   "$temporary"
-if grep -q '@\./meshes/.*\.gltf@' "$temporary"; then
+if grep -q '@\./.*\.gltf@' "$temporary"; then
   printf 'Derived training layer still contains glTF references.\n' >&2
   exit 1
 fi

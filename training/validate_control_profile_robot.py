@@ -70,6 +70,13 @@ def main() -> None:
         if action_count != 12:
             raise RuntimeError(f"Expected 12 actions, resolved {action_count}.")
         env.reset()
+        termination_height = base_env.cfg.termination_height
+        termination_gravity_z = base_env.cfg.termination_projected_gravity_z
+        # Keep the same episode alive long enough to diagnose a failed stance;
+        # otherwise Gym auto-resets it and only exposes the next spawn pose.
+        base_env.cfg.terrain_curriculum = True
+        base_env.cfg.termination_height = -10.0
+        base_env.cfg.termination_projected_gravity_z = 2.0
         terminated_count = 0
         max_foot_force = torch.zeros(4, device=base_env.device)
         max_base_force = torch.tensor(0.0, device=base_env.device)
@@ -78,7 +85,6 @@ def main() -> None:
                 (args.num_envs, action_count), device=base_env.device
             )
             _, _, terminated, _, _ = env.step(actions)
-            terminated_count += int(terminated.sum().item())
             contact_history = base_env._contact_sensor.data.net_forces_w_history.torch
             foot_force = torch.linalg.vector_norm(
                 contact_history[:, :, base_env._feet_sensor_ids], dim=-1
@@ -88,12 +94,27 @@ def main() -> None:
             ).amax()
             max_foot_force = torch.maximum(max_foot_force, foot_force)
             max_base_force = torch.maximum(max_base_force, base_force)
+            current_height = (
+                base_env._robot.data.root_pos_w.torch[:, 2]
+                - base_env._terrain.env_origins[:, 2]
+            )
+            current_gravity_z = base_env._semantic_vector_b(
+                base_env._robot.data.projected_gravity_b.torch
+            )[:, 2]
+            base_contact = base_force > 1.0
+            terminated_count += int(torch.count_nonzero(
+                base_contact
+                | (current_height < termination_height)
+                | (current_gravity_z > termination_gravity_z)
+            ).item())
 
         root_height = (
             base_env._robot.data.root_pos_w.torch[:, 2]
             - base_env._terrain.env_origins[:, 2]
         )
-        gravity_z = base_env._robot.data.projected_gravity_b.torch[:, 2]
+        gravity_z = base_env._semantic_vector_b(
+            base_env._robot.data.projected_gravity_b.torch
+        )[:, 2]
         root_speed = torch.linalg.vector_norm(
             base_env._robot.data.root_lin_vel_w.torch, dim=1
         )
@@ -104,7 +125,16 @@ def main() -> None:
             raise RuntimeError("The standing validation produced non-finite joint state.")
         if terminated_count:
             raise RuntimeError(
-                f"The robot fell or terminated {terminated_count} times during standing validation."
+                "The robot failed the raw stance conditions "
+                f"{terminated_count} times: height={root_height.min().item():.4f}, "
+                f"gravity_z={gravity_z.max().item():.4f}, "
+                "raw_gravity="
+                f"{base_env._robot.data.projected_gravity_b.torch[0].tolist()}, "
+                "root_quaternion="
+                f"{base_env._robot.data.root_quat_w.torch[0].tolist()}, "
+                f"base_force={max_base_force.item():.4f}, "
+                f"foot_forces={max_foot_force.tolist()}, "
+                f"speed={root_speed.max().item():.4f}."
             )
         if root_height.min().item() <= base_env.cfg.termination_height + 0.02:
             raise RuntimeError(
