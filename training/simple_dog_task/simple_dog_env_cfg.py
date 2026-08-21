@@ -57,6 +57,13 @@ if CONTROL_PROFILE is not None:
         for joint in CONTROL_PROFILE["robot"]["joints"]
     }
 
+# Closed-linkage exports can contain unactuated articulation-tree joints whose
+# assembled coordinates are not zero.  They are not policy actions, but their
+# reset coordinates must be preserved or PhysX reconstructs a folded linkage.
+CALIBRATED_PASSIVE_JOINT_POS = dict(profile_value(
+    CONTROL_PROFILE, "robot.passive_joint_positions", {}
+))
+
 JOINT_COUNT = len(CALIBRATED_JOINT_POS)
 JOINT_NAMES = tuple(CALIBRATED_JOINT_POS)
 JOINT_DIRECTIONS = tuple(
@@ -78,12 +85,12 @@ def _start_rotation_quat():
     cr, sr = math.cos(roll / 2), math.sin(roll / 2)
     cp, sp = math.cos(pitch / 2), math.sin(pitch / 2)
     cy, sy = math.cos(yaw / 2), math.sin(yaw / 2)
-    return (
-        cr * cp * cy + sr * sp * sy,
-        sr * cp * cy - cr * sp * sy,
-        cr * sp * cy + sr * cp * sy,
-        cr * cp * sy - sr * sp * cy,
-    )
+    w = cr * cp * cy + sr * sp * sy
+    x = sr * cp * cy - cr * sp * sy
+    y = cr * sp * cy + sr * cp * sy
+    z = cr * cp * sy - sr * sp * cy
+    # Isaac Lab 3 stores runtime quaternions in xyzw order.
+    return (x, y, z, w)
 
 
 def _rough_sub_terrains():
@@ -207,7 +214,7 @@ SIMPLE_DOG_CFG = ArticulationCfg(
     init_state=ArticulationCfg.InitialStateCfg(
         pos=tuple(profile_value(CONTROL_PROFILE, "robot.start_position", (0.0, 0.0, 0.24))),
         rot=_start_rotation_quat(),
-        joint_pos=CALIBRATED_JOINT_POS,
+        joint_pos=CALIBRATED_JOINT_POS | CALIBRATED_PASSIVE_JOINT_POS,
         joint_vel={".*": 0.0},
     ),
     actuators=_actuator_configs(),
@@ -355,6 +362,9 @@ class SimpleDogFlatEnvCfg(DirectRLEnvCfg):
     )
     forward_axis = tuple(
         profile_value(CONTROL_PROFILE, "robot.forward_axis", (0.0, -1.0, 0.0))
+    )
+    up_axis = tuple(
+        profile_value(CONTROL_PROFILE, "robot.up_axis", (0.0, 0.0, 1.0))
     )
     domain_randomization_enabled = profile_value(
         CONTROL_PROFILE, "domain_randomization.enabled", False

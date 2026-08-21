@@ -125,6 +125,25 @@ if ($LASTEXITCODE -ne 0) {
     throw "Could not start the Isaac Lab container."
 }
 
+# A completed Isaac run may leave a zero-byte per-user Hub lock even though
+# no Hub process remains. SimulationApp then stalls before scene creation.
+# Remove only those exact transient locks, and only after proving that no Hub
+# process is alive in the unprivileged training container.
+$clearStaleHubLock = @'
+docker exec --user 0 isaac-lab-gb10 sh -c '
+  if ! pgrep -x omni.hub >/dev/null 2>&1 &&
+     ! pgrep -x omni-hub >/dev/null 2>&1 &&
+     ! pgrep -x hub >/dev/null 2>&1 &&
+     ! pgrep -x hub-daemon >/dev/null 2>&1; then
+    rm -f -- /tmp/hub-leo.lock /tmp/hub-isaac-sim.lock
+  fi
+'
+'@
+& ssh @sshOptions $sshTarget $clearStaleHubLock
+if ($LASTEXITCODE -ne 0) {
+    throw "Could not check the stale Isaac Hub lock before training."
+}
+
 $remoteDirectories = @(
     $remoteTraining,
     "$remoteTraining/assets",
