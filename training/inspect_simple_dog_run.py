@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import statistics
 from pathlib import Path
 
 from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
@@ -13,7 +14,15 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("event_file", type=Path)
     parser.add_argument("--json", action="store_true", dest="as_json")
+    parser.add_argument(
+        "--tail",
+        type=int,
+        default=10,
+        help="Number of recent scalar samples summarized (default: 10).",
+    )
     args = parser.parse_args()
+    if args.tail < 1:
+        parser.error("--tail must be at least 1")
 
     event_path = args.event_file
     if event_path.is_dir() and (event_path / "summaries").is_dir():
@@ -26,6 +35,7 @@ def main() -> None:
         "Episode/Metrics/mean_velocity_error",
         "Episode/Metrics/mean_world_forward_speed",
         "Episode/Metrics/mean_body_lateral_speed",
+        "Episode/Metrics/mean_yaw_rate_error",
         "Episode/Metrics/mean_heading_error",
         "Episode/Metrics/swing_fraction_front_right",
         "Episode/Metrics/swing_fraction_front_left",
@@ -43,6 +53,7 @@ def main() -> None:
         "Episode/Episode_Reward/track_yaw_rate",
         "Episode/Episode_Reward/feet_air_time",
         "Episode/Episode_Reward/air_time_variance",
+        "Episode/Episode_Reward/swing_duty_floor",
         "Episode/Episode_Reward/fall",
         "Episode/Episode_Reward/base_motion",
         "Episode/Episode_Reward/base_orientation",
@@ -53,10 +64,13 @@ def main() -> None:
         "Episode/Episode_Reward/diagonal_gait",
         "Episode/Episode_Reward/complete_gait_cycle",
         "Episode/Episode_Reward/reference_trot",
+        "Episode/Episode_Reward/foot_clearance",
         "Episode/Episode_Reward/uncommanded_motion",
         "Episode/Episode_Reward/prolonged_foot_air",
         "Episode/Episode_Reward/stability",
         "Episode/Episode_Reward/action_rate",
+        "Episode/Episode_Reward/hip_abduction",
+        "Episode/Episode_Reward/foot_spread",
         "Episode/Episode_Termination/fell",
         "Episode/Episode_Termination/time_out",
     )
@@ -82,12 +96,20 @@ def main() -> None:
             continue
         values = accumulator.Scalars(tag)
         first, last = values[0], values[-1]
+        recent = values[-args.tail :]
+        best = max(values, key=lambda value: value.value)
         records[tag] = {
             "first": first.value,
             "first_step": first.step,
             "last": last.value,
             "last_step": last.step,
             "samples": len(values),
+            "tail_samples": len(recent),
+            "tail_mean": statistics.fmean(value.value for value in recent),
+            "tail_min": min(value.value for value in recent),
+            "tail_max": max(value.value for value in recent),
+            "max": best.value,
+            "max_step": best.step,
         }
         if not args.as_json:
             print(

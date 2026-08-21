@@ -17,6 +17,8 @@ COMMANDS = {
     "turn_left": (0.0, 0.0, 0.25),
     "turn_right": (0.0, 0.0, -0.25),
     "diagonal_left": (0.16, 0.12, 0.0),
+    "diagonal_right": (0.16, -0.12, 0.0),
+    "diagonal_reverse_left": (-0.14, 0.12, 0.0),
     "diagonal_reverse_right": (-0.14, -0.12, 0.0),
     "curve_left": (0.16, 0.08, 0.25),
     "curve_right": (0.16, -0.08, -0.25),
@@ -43,6 +45,8 @@ def ideal_segment(name: str) -> dict:
         "mean_swing_foot_clearance": 0.0 if stationary else 0.025,
         "mean_action_rate": 0.10,
         "max_action_step": 0.20,
+        "mean_abs_hip_abduction": 0.08,
+        "max_abs_hip_abduction": 0.16,
         "mean_abs_vertical_speed": 0.03,
         "mean_tilt": 0.03,
         "forward_displacement": forward * duration,
@@ -88,6 +92,16 @@ class MobilityEvaluationTests(unittest.TestCase):
         segments["stop"]["swing_fraction_frflbrbl"][0] = 0.95
         segments["stop"]["mean_swing_foot_clearance"] = 0.001
         self.assertTrue(evaluate("goal", segments)["passed"])
+
+    def test_splayed_moving_stance_fails_gait_quality(self):
+        segments = {name: ideal_segment(name) for name in EXPECTED["goal"]}
+        segments["forward"]["mean_abs_hip_abduction"] = 0.23
+        segments["forward"]["max_abs_hip_abduction"] = 0.30
+        result = evaluate("goal", segments, require_gait_quality=True)
+        self.assertFalse(result["passed"])
+        self.assertTrue(
+            any("hip abduction" in failure for failure in result["failures"])
+        )
 
 
 if __name__ == "__main__":

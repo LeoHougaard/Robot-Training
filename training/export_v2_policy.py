@@ -31,6 +31,8 @@ REQUIRED_GOAL_COMMANDS = {
     "turn_left": (0.0, 0.0, 0.25),
     "turn_right": (0.0, 0.0, -0.25),
     "diagonal_left": (0.16, 0.12, 0.0),
+    "diagonal_right": (0.16, -0.12, 0.0),
+    "diagonal_reverse_left": (-0.14, 0.12, 0.0),
     "diagonal_reverse_right": (-0.14, -0.12, 0.0),
     "curve_left": (0.16, 0.08, 0.25),
     "curve_right": (0.16, -0.08, -0.25),
@@ -72,12 +74,21 @@ def deployment_contract(
     planar_deadband: float,
     yaw_deadband: float,
     stance_action: list[float],
-) -> tuple[dict[str, list[float]], dict[str, object]]:
+    action_limit_by_joint: list[float] | None = None,
+    action_filter_alpha: float = 1.0,
+    action_delta_limit: float = 0.34,
+    position_target_scale_rad: float = 0.25,
+    command_smoothing_time_s: float = 0.4,
+) -> tuple[dict[str, list[float]], dict[str, object], dict[str, object]]:
     """Validate and build the hardware command and stationary-action contract."""
 
+    if action_limit_by_joint is None:
+        action_limit_by_joint = [1.0] * 12
     values = (
         forward_min, forward_max, lateral_min, lateral_max, yaw_max,
-        planar_deadband, yaw_deadband, *stance_action,
+        planar_deadband, yaw_deadband, action_filter_alpha,
+        action_delta_limit, position_target_scale_rad, command_smoothing_time_s,
+        *stance_action, *action_limit_by_joint,
     )
     if not all(math.isfinite(value) for value in values):
         raise ValueError("Export contract values must be finite.")
@@ -99,6 +110,20 @@ def deployment_contract(
         raise ValueError(
             "Stationary stance action must contain 12 normalized values within [-1, 1]."
         )
+    if len(action_limit_by_joint) != 12 or any(
+        not 0.0 < value <= 1.0 for value in action_limit_by_joint
+    ):
+        raise ValueError(
+            "Per-joint normalized action limits must contain 12 values within (0, 1]."
+        )
+    if not 0.0 < action_filter_alpha <= 1.0:
+        raise ValueError("Action filter alpha must be within (0, 1].")
+    if not 0.0 < action_delta_limit <= 1.0:
+        raise ValueError("Normalized action slew limit must be within (0, 1].")
+    if not 0.0 < position_target_scale_rad <= 0.5:
+        raise ValueError("Position target scale must be within (0, 0.5] rad.")
+    if not 0.02 <= command_smoothing_time_s <= 2.0:
+        raise ValueError("Command smoothing time must be within [0.02, 2.0] s.")
     command_limits = {
         "forward_m_s": [forward_min, forward_max],
         "lateral_m_s": [lateral_min, lateral_max],
@@ -110,7 +135,14 @@ def deployment_contract(
         "planar_command_deadband_m_s": planar_deadband,
         "yaw_command_deadband_rad_s": yaw_deadband,
     }
-    return command_limits, stationary_contract
+    action_contract = {
+        "actor_output_clip": [-1.0, 1.0],
+        "applied_normalized_clip_by_joint": action_limit_by_joint,
+        "low_pass_alpha": action_filter_alpha,
+        "applied_normalized_slew_limit": action_delta_limit,
+        "position_target_scale_rad": position_target_scale_rad,
+    }
+    return command_limits, stationary_contract, action_contract
 
 
 def validate_goal_evaluation(evaluation: object) -> None:
@@ -148,6 +180,18 @@ def validate_goal_evaluation(evaluation: object) -> None:
             )
 
 
+def validate_robust_test_evaluation(evaluation: object) -> None:
+    """Allow a deliberately restricted hardware test without weakening promotion."""
+
+    if not isinstance(evaluation, dict) or not evaluation.get("passed"):
+        raise ValueError("Test-policy export still requires a passing evaluation result.")
+    if evaluation.get("stage") != "robust":
+        raise ValueError("Test-policy export requires a passing Robust evaluation.")
+    segments = evaluation.get("segments")
+    if not isinstance(segments, dict) or not segments:
+        raise ValueError("Robust evaluation has no segment evidence.")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("checkpoint", type=Path)
@@ -155,6 +199,14 @@ def main() -> None:
     parser.add_argument("--profile-id", required=True)
     parser.add_argument("--profile-sha", required=True)
     parser.add_argument("--evaluation", type=Path, required=True)
+    parser.add_argument(
+        "--allow-robust-test-policy",
+        action="store_true",
+        help=(
+            "Export a passing Robust checkpoint as an explicitly unpromoted, "
+            "restricted test policy. This does not relax the normal Goal gate."
+        ),
+    )
     parser.add_argument("--validated-forward-min", type=float, default=-0.18)
     parser.add_argument("--validated-forward-max", type=float, default=0.22)
     parser.add_argument("--validated-lateral-min", type=float, default=-0.16)
@@ -169,10 +221,41 @@ def main() -> None:
         required=True,
         help="Normalized 12-joint stance action validated for the robot profile.",
     )
+    parser.add_argument(
+        "--action-limit-by-joint",
+        type=float,
+        nargs=12,
+        default=[1.0] * 12,
+        help="Applied normalized action limits in policy-joint order.",
+    )
+    parser.add_argument(
+        "--action-filter-alpha",
+        type=float,
+        default=1.0,
+        help="First-order low-pass alpha applied to bounded actor actions.",
+    )
+    parser.add_argument(
+        "--action-delta-limit",
+        type=float,
+        required=True,
+        help="Maximum normalized change in the applied action per 20 ms frame.",
+    )
+    parser.add_argument(
+        "--position-target-scale-rad",
+        type=float,
+        required=True,
+        help="Radians of semantic joint residual represented by normalized action 1.",
+    )
+    parser.add_argument(
+        "--command-smoothing-time-s",
+        type=float,
+        required=True,
+        help="First-order command smoothing time used during training.",
+    )
     args = parser.parse_args()
 
     try:
-        command_limits, stationary_contract = deployment_contract(
+        command_limits, stationary_contract, action_contract = deployment_contract(
             forward_min=args.validated_forward_min,
             forward_max=args.validated_forward_max,
             lateral_min=args.validated_lateral_min,
@@ -181,13 +264,21 @@ def main() -> None:
             planar_deadband=args.stationary_planar_deadband,
             yaw_deadband=args.stationary_yaw_deadband,
             stance_action=args.stationary_stance_action,
+            action_limit_by_joint=args.action_limit_by_joint,
+            action_filter_alpha=args.action_filter_alpha,
+            action_delta_limit=args.action_delta_limit,
+            position_target_scale_rad=args.position_target_scale_rad,
+            command_smoothing_time_s=args.command_smoothing_time_s,
         )
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
 
     evaluation = json.loads(args.evaluation.read_text(encoding="utf-8"))
     try:
-        validate_goal_evaluation(evaluation)
+        if args.allow_robust_test_policy:
+            validate_robust_test_evaluation(evaluation)
+        else:
+            validate_goal_evaluation(evaluation)
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
 
@@ -241,7 +332,10 @@ def main() -> None:
     weights_path = args.output / "policy_weights.npz"
     np.savez_compressed(weights_path, **arrays)
     metadata = {
-        "schema_version": 1,
+        "schema_version": 2,
+        "deployment_tier": (
+            "restricted_robust_test" if args.allow_robust_test_policy else "goal_promoted"
+        ),
         "profile_id": args.profile_id,
         "profile_sha256": args.profile_sha,
         "checkpoint_sha256": sha256(args.checkpoint),
@@ -258,9 +352,9 @@ def main() -> None:
             "previous_applied_action[12]",
         ],
         "action_size": 12,
-        "action_clip": [-1.0, 1.0],
-        "action_scale_rad": 0.25,
+        "action_contract": action_contract,
         "control_hz": 50,
+        "command_smoothing_time_s": args.command_smoothing_time_s,
         "stationary_action_contract": stationary_contract,
         "validated_command_limits": command_limits,
         "activation": "elu",

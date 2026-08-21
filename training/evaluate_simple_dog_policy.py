@@ -14,6 +14,7 @@ EXPECTED = {
     "goal": (
         "stand", "forward", "reverse", "strafe_left", "strafe_right",
         "turn_left", "turn_right", "diagonal_left",
+        "diagonal_right", "diagonal_reverse_left",
         "diagonal_reverse_right", "curve_left", "curve_right", "stop",
     ),
 }
@@ -235,6 +236,18 @@ def check_gait_quality(
         add_failure(
             failures, name,
             f"maximum normalized action step is {record['max_action_step']:.3f}",
+        )
+    mean_hip_abduction = float(record.get("mean_abs_hip_abduction", 0.0))
+    if mean_hip_abduction > 0.14:
+        add_failure(
+            failures, name,
+            f"mean hip abduction is {mean_hip_abduction:.3f} rad",
+        )
+    max_hip_abduction = float(record.get("max_abs_hip_abduction", 0.0))
+    if max_hip_abduction > 0.24:
+        add_failure(
+            failures, name,
+            f"maximum hip abduction is {max_hip_abduction:.3f} rad",
         )
     if float(record["mean_abs_vertical_speed"]) > vertical_speed_limit:
         add_failure(

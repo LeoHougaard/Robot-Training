@@ -16,6 +16,8 @@ def main() -> int:
     parser.add_argument("output", type=Path)
     parser.add_argument("--frames", type=int, default=12)
     parser.add_argument("--columns", type=int, default=4)
+    parser.add_argument("--start-frame", type=int, default=0)
+    parser.add_argument("--end-frame", type=int)
     args = parser.parse_args()
 
     capture = cv2.VideoCapture(str(args.video))
@@ -24,7 +26,11 @@ def main() -> int:
     if total < 2:
         raise SystemExit("Video has fewer than two frames.")
 
-    indices = np.linspace(0, total - 1, args.frames, dtype=int)
+    start = max(0, min(args.start_frame, total - 1))
+    end = total - 1 if args.end_frame is None else min(args.end_frame, total - 1)
+    if end < start:
+        raise SystemExit("end-frame must not precede start-frame.")
+    indices = np.linspace(start, end, args.frames, dtype=int)
     sampled: list[np.ndarray] = []
     for index in indices:
         capture.set(cv2.CAP_PROP_POS_FRAMES, int(index))

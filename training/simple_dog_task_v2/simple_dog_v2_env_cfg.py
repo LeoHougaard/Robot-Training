@@ -33,6 +33,16 @@ class SimpleDogV2CoreEnvCfg(SimpleDogFlatEnvCfg):
     action_delta_limit = profile_value(
         CONTROL_PROFILE, "environment.action_delta_limit", 0.34
     )
+    action_limit_by_joint = tuple(
+        profile_value(
+            CONTROL_PROFILE,
+            "environment.action_limit_by_joint",
+            (1.0,) * JOINT_COUNT,
+        )
+    )
+    action_filter_alpha = profile_value(
+        CONTROL_PROFILE, "environment.action_filter_alpha", 1.0
+    )
     # When all commanded axes are inside these deadbands, use the profile's
     # calibrated four-foot stance instead of allowing an actor to exploit a
     # motionless three-leg stance. The same command-only rule is part of the
@@ -208,6 +218,9 @@ class SimpleDogV2CoreEnvCfg(SimpleDogFlatEnvCfg):
     reference_trot_reward_scale = profile_value(
         CONTROL_PROFILE, "rewards.reference_trot", 0.0
     )
+    clocked_trot_reward_scale = profile_value(
+        CONTROL_PROFILE, "rewards.clocked_trot", 0.0
+    )
     reference_trot_period_s = profile_value(
         CONTROL_PROFILE, "rewards.reference_trot_period_s", 0.32
     )
@@ -225,6 +238,12 @@ class SimpleDogV2CoreEnvCfg(SimpleDogFlatEnvCfg):
     )
     air_time_variance_penalty_scale = profile_value(
         CONTROL_PROFILE, "rewards.air_time_variance_penalty", 0.0
+    )
+    minimum_swing_duty_fraction = profile_value(
+        CONTROL_PROFILE, "rewards.minimum_swing_duty_fraction", 0.0
+    )
+    swing_duty_floor_penalty_scale = profile_value(
+        CONTROL_PROFILE, "rewards.swing_duty_floor_penalty", 0.0
     )
     diagonal_joint_symmetry_reward_scale = profile_value(
         CONTROL_PROFILE, "rewards.diagonal_joint_symmetry", 0.0
@@ -254,8 +273,30 @@ class SimpleDogV2CoreEnvCfg(SimpleDogFlatEnvCfg):
     stability_penalty_scale = profile_value(
         CONTROL_PROFILE, "rewards.stability_penalty", -0.50
     )
+    vertical_motion_penalty_scale = profile_value(
+        CONTROL_PROFILE, "rewards.vertical_motion_penalty", 0.0
+    )
     action_rate_penalty_scale = profile_value(
         CONTROL_PROFILE, "rewards.action_rate_penalty", -0.02
+    )
+    hip_abduction_penalty_scale = profile_value(
+        CONTROL_PROFILE, "rewards.hip_abduction_penalty", 0.0
+    )
+    hip_abduction_tolerance_rad = profile_value(
+        CONTROL_PROFILE, "rewards.hip_abduction_tolerance_rad", 0.08
+    )
+    foot_spread_penalty_scale = profile_value(
+        CONTROL_PROFILE, "rewards.foot_spread_penalty", 0.0
+    )
+    foot_spread_tolerance_m = profile_value(
+        CONTROL_PROFILE, "rewards.foot_spread_tolerance_m", 0.01
+    )
+    nominal_foot_lateral_m = tuple(
+        profile_value(
+            CONTROL_PROFILE,
+            "rewards.nominal_foot_lateral_m",
+            (0.0, 0.0, 0.0, 0.0),
+        )
     )
     foot_slip_penalty_scale_v2 = profile_value(
         CONTROL_PROFILE, "rewards.foot_slip_penalty", -0.25
@@ -341,11 +382,12 @@ class SimpleDogV2PlayEnvCfg(SimpleDogV2CoreEnvCfg):
     )
     viewer: ViewerCfg = ViewerCfg(
         # Isaac Lab 3.0 records these as absolute world coordinates in
-        # headless mode. Frame the complete Goal path (spawn through the final
-        # stop) instead of relying on asset-root following, which the recorder
-        # does not apply.
-        eye=(2.90, 1.80, 1.20),
-        lookat=(0.70, -0.70, 0.14),
+        # headless mode. Keep the camera close enough to inspect individual
+        # foot placement over the first eight seconds of a rollout; longer
+        # deterministic promotion videos use their command metrics as the
+        # authoritative whole-path evidence.
+        eye=(1.35, 0.30, 0.62),
+        lookat=(0.0, -0.85, 0.14),
         origin_type="world",
     )
     command_forward = (0.25, 0.25)
@@ -396,6 +438,13 @@ class SimpleDogV2RobustEvalEnvCfg(SimpleDogV2CoreEvalEnvCfg):
 class SimpleDogV2GoalEvalEnvCfg(SimpleDogV2PlayEnvCfg):
     """Full planar-mobility promotion suite on held-out rough ground."""
 
+    # Match training and the exported Pixel controller.  Core/Robust playback
+    # keeps its legacy near-instant command changes, while Goal explicitly
+    # verifies the deployable smoothing contract across direction reversals.
+    command_smoothing_time_s = profile_value(
+        CONTROL_PROFILE, "commands.smoothing_s", 0.40
+    )
+
     # Goal acceptance must exercise the same kind of mildly uneven surface as
     # training. The former inherited plane made directional metrics useful but
     # produced a misleading flat rollout in the shared viewer.
@@ -430,6 +479,8 @@ class SimpleDogV2GoalEvalEnvCfg(SimpleDogV2PlayEnvCfg):
         ("turn_left", 175, 0.0, 0.0, 0.25),
         ("turn_right", 175, 0.0, 0.0, -0.25),
         ("diagonal_left", 175, 0.16, 0.12, 0.0),
+        ("diagonal_right", 175, 0.16, -0.12, 0.0),
+        ("diagonal_reverse_left", 175, -0.14, 0.12, 0.0),
         ("diagonal_reverse_right", 175, -0.14, -0.12, 0.0),
         ("curve_left", 175, 0.16, 0.08, 0.25),
         ("curve_right", 175, 0.16, -0.08, -0.25),
